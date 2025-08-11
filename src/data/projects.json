@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "E-commerce Platform Redesign",
+    "description": "Complete redesign and development of a modern e-commerce platform using React, Node.js, and PostgreSQL. Implemented advanced features including real-time inventory management, AI-powered recommendations, and seamless payment processing.",
+    "technologies": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+    "category": "Web Development",
+    "year": "2024",
+    "status": "Completed",
+    "image": "/images/ecommerce-project.jpg",
+    "link": "https://example-ecommerce.com",
+    "github": "https://github.com/example/ecommerce"
+  },
+  {
+    "id": "2",
+    "title": "Engineering Team Scaling Initiative",
+    "description": "Led a strategic initiative to scale an engineering team from 15 to 45 developers across 3 product areas. Implemented new hiring processes, mentorship programs, and technical architecture decisions that improved delivery velocity by 300%.",
+    "technologies": ["Team Management", "Process Design", "Architecture Planning", "Mentorship"],
+    "category": "Engineering Management",
+    "year": "2023",
+    "status": "Completed",
+    "image": "/images/team-scaling.jpg",
+    "link": null,
+    "github": null
+  },
+  {
+    "id": "3",
+    "title": "Progressive Web App for Healthcare",
+    "description": "Developed a PWA for healthcare providers to manage patient appointments and records. Built with offline-first approach using service workers, implemented HIPAA compliance, and integrated with existing hospital systems.",
+    "technologies": ["PWA", "Vue.js", "Express", "MongoDB", "Service Workers"],
+    "category": "Web Development",
+    "year": "2023",
+    "status": "Completed",
+    "image": "/images/healthcare-pwa.jpg",
+    "link": "https://healthcare-app.example.com",
+    "github": "https://github.com/example/healthcare-pwa"
+  },
+  {
+    "id": "4",
+    "title": "DevOps Culture Transformation",
+    "description": "Guided a traditional software company through DevOps adoption, implementing CI/CD pipelines, containerization, and infrastructure as code. Reduced deployment time from 2 weeks to 2 hours and improved system reliability by 99.9%.",
+    "technologies": ["DevOps", "Docker", "Kubernetes", "Jenkins", "Terraform"],
+    "category": "Engineering Management",
+    "year": "2023",
+    "status": "Completed",
+    "image": "/images/devops-transformation.jpg",
+    "link": null,
+    "github": null
+  },
+  {
+    "id": "5",
+    "title": "Real-time Analytics Dashboard",
+    "description": "Built a comprehensive analytics dashboard for a SaaS platform using React, D3.js, and WebSocket connections. Features real-time data visualization, custom reporting, and interactive filters for business intelligence.",
+    "technologies": ["React", "D3.js", "WebSocket", "Python", "Redis"],
+    "category": "Web Development",
+    "year": "2024",
+    "status": "In Progress",
+    "image": "/images/analytics-dashboard.jpg",
+    "link": "https://analytics.example.com",
+    "github": "https://github.com/example/analytics"
+  }
+] 

@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import ContactForm from '../components/ContactForm';
+---
+
+<Layout title="Contact - Walnut & Web" description="Get in touch about web development, engineering consulting, or custom woodworking projects">
+  <Navigation client:load />
+  
+  <main>
+    <!-- Header Section -->
+    <section class="bg-gradient-to-br from-gray-50 to-green-50 py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Let's Start a Conversation
+          </h1>
+          <p class="text-xl text-gray-700 mb-8">
+            Whether you're looking for technical consulting, custom software development, 
+            or a unique piece of handcrafted furniture, I'd love to hear about your project.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form and Info -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
+            <ContactForm client:load />
+          </div>
+
+          <!-- Contact Information -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="text-amber-600 mr-4 mt-1">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Email</h3>
+                  <p class="text-gray-600">hello@walnutandweb.com</p>
+                  <p class="text-sm text-gray-500 mt-1">I typically respond within 24 hours</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-amber-600 mr-4 mt-1">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Location</h3>
+                  <p class="text-gray-600">Pacific Northwest, USA</p>
+                  <p class="text-sm text-gray-500 mt-1">Available for remote work worldwide</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-amber-600 mr-4 mt-1">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Response Time</h3>
+                  <p class="text-gray-600">Within 1-2 business days</p>
+                  <p class="text-sm text-gray-500 mt-1">Faster for urgent technical issues</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Services Overview -->
+            <div class="mt-12">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">What I Can Help With</h3>
+              <div class="space-y-4">
+                <div class="border-l-4 border-blue-500 pl-4">
+                  <h4 class="font-semibold text-gray-900">Technical Consulting</h4>
+                  <p class="text-gray-600 text-sm">Architecture review, technology strategy, code audits</p>
+                </div>
+                <div class="border-l-4 border-green-500 pl-4">
+                  <h4 class="font-semibold text-gray-900">Web Development</h4>
+                  <p class="text-gray-600 text-sm">Full-stack applications, API development, performance optimization</p>
+                </div>
+                <div class="border-l-4 border-purple-500 pl-4">
+                  <h4 class="font-semibold text-gray-900">Engineering Management</h4>
+                  <p class="text-gray-600 text-sm">Team scaling, process improvement, technical leadership</p>
+                </div>
+                <div class="border-l-4 border-amber-500 pl-4">
+                  <h4 class="font-semibold text-gray-900">Custom Woodworking</h4>
+                  <p class="text-gray-600 text-sm">Furniture design, custom pieces, restoration work</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+          <p class="text-xl text-gray-600">Quick answers to common questions</p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="font-semibold text-gray-900 mb-2">How do you approach new projects?</h3>
+            <p class="text-gray-600">
+              I start with a discovery phase to understand your needs, timeline, and budget. 
+              Then I provide a detailed proposal with milestones and deliverables. Communication 
+              is key throughout the entire process.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="font-semibold text-gray-900 mb-2">What's your typical project timeline?</h3>
+            <p class="text-gray-600">
+              Technical projects range from 2-12 weeks depending on complexity. 
+              Woodworking pieces typically take 2-8 weeks. I provide realistic timelines 
+              upfront and keep you updated on progress.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="font-semibold text-gray-900 mb-2">Do you work with international clients?</h3>
+            <p class="text-gray-600">
+              Yes! I work with clients worldwide for technical consulting and development projects. 
+              For woodworking, I can discuss shipping options, though local projects are preferred.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="font-semibold text-gray-900 mb-2">What makes your approach unique?</h3>
+            <p class="text-gray-600">
+              I bring the same attention to detail and craftsmanship mindset to both code and wood. 
+              This means focusing on quality, sustainability, and creating solutions that stand the test of time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout> 

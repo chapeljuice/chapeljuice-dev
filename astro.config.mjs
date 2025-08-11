@@ -1,5 +1,32 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
+import react from '@astrojs/react';
+import tailwindcss from '@tailwindcss/vite';
+
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  integrations: [react()],
+  output: 'static',
+  site: 'https://walnutandweb.com',
+  
+  build: {
+    inlineStylesheets: 'auto',
+  },
+  
+  vite: {
+    plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name].[hash][extname]',
+          chunkFileNames: 'assets/[name].[hash].js',
+          entryFileNames: 'assets/[name].[hash].js',
+        },
+      },
+    },
+  },
+  
+  // SEO and performance optimizations
+  compressHTML: true,
+});
