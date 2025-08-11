@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import SectionDivider from '../components/SectionDivider';
 ---
 
 <Layout title="Walnut & Web - Web Development & Custom Woodworking">
@@ -9,141 +10,149 @@ import Footer from '../components/Footer';
   
   <main>
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-amber-50 to-orange-100 py-20">
+    <section class="bg-[#1e2939] py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Crafting Digital Solutions &
-            <span class="text-amber-600">Fine Woodwork</span>
+          <h1 class="text-4xl md:text-6xl font-light text-white mb-6">
+            <span class="silkscreen-regular">Hi, I'm Ryan!</span> 🤘
+            <br /><br />
+            I craft unique, impactful websites 
+            <span class="text-teal-400">for small businesses.</span>
           </h1>
-          <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Expert web development, engineering management consulting, and custom woodworking services. 
-            Where technology meets craftsmanship.
+          <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+            Helping breweries 🍻, arcades 👾, and other small, local businesses grow with personal, tailored web solutions.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/projects" 
-              class="bg-amber-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-amber-700 transition-colors"
+              class="bg-teal-400 text-black px-8 py-3 rounded-lg text-lg font-semibold hover:bg-teal-700 hover:text-white hover:scale-105 hover:shadow-lg transform transition-all duration-200 active:scale-95 silkscreen-regular"
             >
-              View My Work
+              🚀 View My Work
             </a>
             <a 
               href="/contact" 
-              class="border-2 border-amber-600 text-amber-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-amber-600 hover:text-white transition-colors"
+              class="border-2 border-teal-400 text-teal-400 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-teal-400 hover:text-black hover:scale-105 hover:shadow-lg transform transition-all duration-200 active:scale-95 silkscreen-regular"
             >
-              Get in Touch
+              👋 Get in Touch
             </a>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Chevron divider between hero and services -->
+    <SectionDivider bottomColor="#ffffff" topColor="#1e2939" />
 
     <!-- Services Section -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            What I Do
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 silkscreen-regular">
+            What I Do ✨
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Combining technical expertise with artisanal craftsmanship to deliver exceptional results.
+            Where pixels meet sawdust! Combining technical expertise with artisanal craftsmanship to deliver exceptional results.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Web Development -->
-          <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-            <div class="text-amber-600 mb-4">
+          <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg hover:-translate-y-2 hover:bg-gradient-to-br hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 group cursor-pointer">
+            <div class="text-teal-600 mb-4 group-hover:scale-110 transition-transform duration-300">
               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Web Development</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-3 silkscreen-regular">💻 Web Development</h3>
             <p class="text-gray-600">
-              Modern, responsive websites and applications built with the latest technologies. 
-              From concept to deployment, I create digital experiences that perform.
+              Crafting modern, responsive websites that actually work (and look great doing it!). 
+              From that first spark of an idea to going live, I build digital experiences that perform beautifully.
             </p>
           </div>
 
           <!-- Engineering Management -->
-          <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-            <div class="text-amber-600 mb-4">
+          <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg hover:-translate-y-2 hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50 transition-all duration-300 group cursor-pointer">
+            <div class="text-teal-600 mb-4 group-hover:scale-110 transition-transform duration-300">
               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Engineering Management</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-3 silkscreen-regular">🎯 Engineering Management</h3>
             <p class="text-gray-600">
-              Strategic technical leadership and team optimization. I help organizations scale their 
-              engineering capabilities and deliver better products faster.
+              Turning engineering chaos into beautiful symphony! I help teams work smarter, ship faster, 
+              and actually enjoy the process (revolutionary, I know).
             </p>
           </div>
 
           <!-- Custom Woodworking -->
-          <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-            <div class="text-amber-600 mb-4">
+          <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg hover:-translate-y-2 hover:bg-gradient-to-br hover:from-amber-50 hover:to-orange-50 transition-all duration-300 group cursor-pointer">
+            <div class="text-teal-600 mb-4 group-hover:scale-110 transition-transform duration-300">
               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Custom Woodworking</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-3 silkscreen-regular">🪵 Custom Woodworking</h3>
             <p class="text-gray-600">
-              Handcrafted furniture and wooden products made with attention to detail and quality. 
-              Each piece is unique and built to last generations.
+              From tree to treasure! Handcrafted furniture and wooden creations made with old-school attention to detail. 
+              Each piece has its own personality and is built to outlast your great-grandkids.
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <SectionDivider bottomColor="#fbf9fa" topColor="#fff" />
+
     <!-- Featured Work Preview -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-[#fbf9fa]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Featured Work
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 silkscreen-regular">
+            Featured Work 🎨
           </h2>
           <p class="text-xl text-gray-600">
-            A glimpse into my recent projects and creations.
+            The good stuff! Here's a peek at what I've been cooking up lately.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <div class="h-64 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center">
-              <span class="text-gray-500 text-lg">Web Project Preview</span>
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div class="h-64 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center group-hover:from-blue-200 group-hover:to-indigo-300 transition-all duration-300">
+              <span class="text-gray-500 text-lg group-hover:scale-110 transition-transform duration-300">💻 Web Project Preview</span>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Latest Web Development</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2 silkscreen-regular">Latest Web Development</h3>
               <p class="text-gray-600 mb-4">
-                Explore my recent web development projects showcasing modern frameworks and best practices.
+                Explore my recent web development projects showcasing modern frameworks and best practices (with a sprinkle of magic ✨).
               </p>
-              <a href="/projects" class="text-amber-600 font-semibold hover:text-amber-700">
-                View All Projects →
+              <a href="/projects" class="text-teal-600 font-semibold hover:text-teal-700 group inline-flex items-center">
+                View All Projects 
+                <span class="ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
               </a>
             </div>
           </div>
 
-          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center">
-              <span class="text-gray-500 text-lg">Woodwork Preview</span>
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center group-hover:from-amber-200 group-hover:to-orange-300 transition-all duration-300">
+              <span class="text-gray-500 text-lg group-hover:scale-110 transition-transform duration-300">🪵 Woodwork Preview</span>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Handcrafted Pieces</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2 silkscreen-regular">Handcrafted Pieces</h3>
               <p class="text-gray-600 mb-4">
-                Discover unique wooden furniture and products crafted with traditional techniques and modern design.
+                Discover unique wooden furniture and products crafted with traditional techniques and modern design (no splinters included 😉).
               </p>
-              <a href="/products" class="text-amber-600 font-semibold hover:text-amber-700">
-                Browse Collection →
+              <a href="/products" class="text-teal-600 font-semibold hover:text-teal-700 group inline-flex items-center">
+                Browse Collection 
+                <span class="ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
               </a>
             </div>
           </div>
         </div>
 
         <div class="text-center">
-          <a 
+                      <a 
             href="/about" 
-            class="inline-flex items-center text-amber-600 font-semibold text-lg hover:text-amber-700"
+            class="inline-flex items-center text-teal-600 font-semibold text-lg hover:text-teal-700"
           >
             Learn more about my story
             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,6 +163,8 @@ import Footer from '../components/Footer';
       </div>
     </section>
   </main>
+
+  <SectionDivider bottomColor="#1e2939" topColor="#fbf9fa" />
 
   <Footer />
 </Layout>

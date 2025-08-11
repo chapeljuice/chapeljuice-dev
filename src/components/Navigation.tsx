@@ -17,7 +17,7 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <a href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-amber-600">
+              <span className="text-2xl font-bold text-teal-600 silkscreen-regular">
                 Walnut & Web
               </span>
             </a>
@@ -29,7 +29,7 @@ const Navigation = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 {item.label}
               </a>
@@ -40,7 +40,7 @@ const Navigation = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-amber-600 focus:outline-none focus:text-amber-600"
+              className="text-gray-700 hover:text-teal-600 focus:outline-none focus:text-teal-600"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
@@ -62,7 +62,7 @@ const Navigation = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-gray-700 hover:text-amber-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                  className="text-gray-700 hover:text-teal-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

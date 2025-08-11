@@ -43,7 +43,7 @@ const ContactForm = () => {
         </p>
         <button
           onClick={() => setSubmitStatus('idle')}
-          className="text-green-600 hover:text-green-700 font-medium"
+          className="text-green-600 hover:text-green-700 font-medium silkscreen-regular"
         >
           Send Another Message
         </button>
@@ -125,7 +125,7 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors silkscreen-regular ${
           isSubmitting
             ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
             : 'bg-amber-600 text-white hover:bg-amber-700'

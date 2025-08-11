@@ -76,7 +76,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             {formatPrice(product.price)}
           </span>
           
-          <button className="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition-colors text-sm font-semibold">
+          <button className="bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition-colors text-sm font-semibold silkscreen-regular">
             {product.status === 'Available' ? 'Inquire' : 
              product.status === 'Custom Order' ? 'Discuss' : 'View Details'}
           </button>
