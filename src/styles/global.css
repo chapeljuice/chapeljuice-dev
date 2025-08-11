@@ -89,12 +89,12 @@
 }
 
 /* Expanding underline animation for text links */
-a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"]) {
+a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"]):not(.nav-active) {
   position: relative;
   text-decoration: none;
 }
 
-a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"])::after {
+a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"]):not(.nav-active)::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -106,8 +106,25 @@ a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"])::after {
   transform: translateX(-50%);
 }
 
-a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"]):hover::after {
+a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"]):not(.nav-active):hover::after {
   width: 100%;
+}
+
+/* Active navigation state - higher specificity */
+.nav-active {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 100% !important;
+  height: 2px;
+  background-color: currentColor;
+  transform: translateX(-50%);
 }
 
 /* Custom utilities for better text handling */

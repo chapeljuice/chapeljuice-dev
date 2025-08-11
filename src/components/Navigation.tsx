@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
-const Navigation = () => {
+interface NavigationProps {
+  currentPath?: string;
+}
+
+const Navigation = ({ currentPath = '/' }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -28,7 +32,11 @@ const Navigation = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors relative ${
+                  currentPath === item.href
+                    ? 'text-teal-600 nav-active'
+                    : 'text-gray-700 hover:text-teal-600'
+                }`}
               >
                 {item.label}
               </a>
@@ -61,7 +69,11 @@ const Navigation = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-gray-700 hover:text-teal-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors relative ${
+                    currentPath === item.href
+                      ? 'text-teal-600 nav-active'
+                      : 'text-gray-700 hover:text-teal-600'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

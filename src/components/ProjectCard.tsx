@@ -5,7 +5,7 @@ interface Project {
   technologies: string[];
   category: string;
   year: string;
-  status: 'Completed' | 'In Progress';
+  status: string;
   link?: string;
   github?: string;
   image?: string;

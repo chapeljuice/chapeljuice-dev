@@ -6,7 +6,7 @@ import SectionDivider from '../components/SectionDivider';
 ---
 
 <Layout title="Walnut & Web - Web Development & Custom Woodworking">
-  <Navigation client:load />
+  <Navigation client:load currentPath={Astro.url.pathname} />
   
   <main>
     <!-- Hero Section -->
@@ -87,10 +87,10 @@ import SectionDivider from '../components/SectionDivider';
       </div>
     </section>
 
-    <SectionDivider bottomColor="#fbf9fa" topColor="#fff" />
+    <SectionDivider bottomColor="#dbd3d7" topColor="#fff" />
 
     <!-- Featured Work Preview -->
-    <section class="py-20 bg-[#fbf9fa]">
+    <section class="py-20 bg-[#dbd3d7]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 silkscreen-regular">
@@ -150,7 +150,7 @@ import SectionDivider from '../components/SectionDivider';
     </section>
   </main>
 
-  <SectionDivider bottomColor="#1e2939" topColor="#fbf9fa" />
+  <SectionDivider bottomColor="#1e2939" topColor="#dbd3d7" />
 
   <Footer />
 </Layout>

@@ -4,16 +4,17 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ProjectCard from '../components/ProjectCard';
 import projectsData from '../data/projects.json';
+import SectionDivider from '../components/SectionDivider';
 
 const projects = projectsData;
 ---
 
 <Layout title="Projects - Walnut & Web" description="Explore my web development and engineering management projects">
-  <Navigation client:load />
+  <Navigation client:load currentPath={Astro.url.pathname} />
   
   <main>
     <!-- Header Section -->
-    <section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+    <section class="bg-[#e0e7ff] py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 silkscreen-regular">
@@ -27,6 +28,8 @@ const projects = projectsData;
       </div>
     </section>
 
+    <SectionDivider bottomColor="#fff" topColor="#e0e7ff" />
+
     <!-- Projects Grid -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,6 +41,8 @@ const projects = projectsData;
       </div>
     </section>
   </main>
+
+  <SectionDivider bottomColor="#1e2939" topColor="#fff" />
 
   <Footer />
 </Layout>

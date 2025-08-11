@@ -2,14 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import SectionDivider from '../components/SectionDivider';
 ---
 
 <Layout title="About - Walnut & Web" description="Learn about my journey in web development, engineering management, and woodworking">
-  <Navigation client:load />
+  <Navigation client:load currentPath={Astro.url.pathname} />
   
   <main>
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
+    <section class="bg-[#eff6ff] py-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 silkscreen-regular">
@@ -23,6 +24,8 @@ import Footer from '../components/Footer';
       </div>
     </section>
 
+    <SectionDivider bottomColor="#fff" topColor="#eff6ff" />
+    
     <!-- Story Section -->
     <section class="py-20 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,8 +56,10 @@ import Footer from '../components/Footer';
       </div>
     </section>
 
+    <SectionDivider bottomColor="#f8fafc" topColor="#fff" />
+    
     <!-- Skills & Experience -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-[#f8fafc]">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">Skills & Experience</h2>
@@ -62,7 +67,7 @@ import Footer from '../components/Footer';
             A unique blend of technical expertise and traditional craftsmanship.
           </p>
         </div>
-
+        
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <!-- Technical Skills -->
           <div class="bg-white p-8 rounded-xl shadow-lg">
@@ -87,7 +92,7 @@ import Footer from '../components/Footer';
               </div>
             </div>
           </div>
-
+          
           <!-- Woodworking Skills -->
           <div class="bg-white p-8 rounded-xl shadow-lg">
             <div class="text-teal-600 mb-4">
@@ -114,6 +119,8 @@ import Footer from '../components/Footer';
         </div>
       </div>
     </section>
+    
+    <SectionDivider bottomColor="#fff" topColor="#f8fafc" />
 
     <!-- Values Section -->
     <section class="py-20 bg-white">
@@ -168,6 +175,8 @@ import Footer from '../components/Footer';
       </div>
     </section>
 
+    <SectionDivider bottomColor="#f8fafc" topColor="#fff" />
+
     <!-- Call to Action -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -195,6 +204,8 @@ import Footer from '../components/Footer';
       </div>
     </section>
   </main>
+
+  <SectionDivider bottomColor="#1e2939" topColor="#fbf9fa" />
 
   <Footer />
 </Layout> 

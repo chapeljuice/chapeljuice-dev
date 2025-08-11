@@ -3,14 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
+import SectionDivider from '../components/SectionDivider';
 ---
 
 <Layout title="Contact - Walnut & Web" description="Get in touch about web development, engineering consulting, or custom woodworking projects">
-  <Navigation client:load />
+  <Navigation client:load currentPath={Astro.url.pathname} />
   
   <main>
     <!-- Header Section -->
-    <section class="bg-gradient-to-br from-gray-50 to-green-50 py-20">
+    <section class="bg-[#f0fdf4] py-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 silkscreen-regular">
@@ -24,6 +25,8 @@ import ContactForm from '../components/ContactForm';
       </div>
     </section>
 
+    <SectionDivider bottomColor="#fff" topColor="#f0fdf4" />
+    
     <!-- Contact Form and Info -->
     <section class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +36,7 @@ import ContactForm from '../components/ContactForm';
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
             <ContactForm client:load />
           </div>
-
+          
           <!-- Contact Information -->
           <div>
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
@@ -51,7 +54,7 @@ import ContactForm from '../components/ContactForm';
                   <p class="text-sm text-gray-500 mt-1">I typically respond within 24 hours</p>
                 </div>
               </div>
-
+              
               <div class="flex items-start">
                 <div class="text-teal-600 mr-4 mt-1">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,7 +68,7 @@ import ContactForm from '../components/ContactForm';
                   <p class="text-sm text-gray-500 mt-1">Available for remote work worldwide</p>
                 </div>
               </div>
-
+              
               <div class="flex items-start">
                 <div class="text-teal-600 mr-4 mt-1">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,7 +82,7 @@ import ContactForm from '../components/ContactForm';
                 </div>
               </div>
             </div>
-
+            
             <!-- Services Overview -->
             <div class="mt-12">
               <h3 class="text-xl font-bold text-gray-900 mb-4">What I Can Help With</h3>
@@ -107,14 +110,16 @@ import ContactForm from '../components/ContactForm';
       </div>
     </section>
 
+    <SectionDivider bottomColor="#fbf9fa" topColor="#fff" />
+    
     <!-- FAQ Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-[#fbf9fa]">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
           <p class="text-xl text-gray-600">Quick answers to common questions</p>
         </div>
-
+        
         <div class="space-y-6">
           <div class="bg-white rounded-lg p-6 shadow-sm">
             <h3 class="font-semibold text-gray-900 mb-2">How do you approach new projects?</h3>
@@ -124,7 +129,7 @@ import ContactForm from '../components/ContactForm';
               is key throughout the entire process.
             </p>
           </div>
-
+          
           <div class="bg-white rounded-lg p-6 shadow-sm">
             <h3 class="font-semibold text-gray-900 mb-2">What's your typical project timeline?</h3>
             <p class="text-gray-600">
@@ -133,7 +138,7 @@ import ContactForm from '../components/ContactForm';
               upfront and keep you updated on progress.
             </p>
           </div>
-
+          
           <div class="bg-white rounded-lg p-6 shadow-sm">
             <h3 class="font-semibold text-gray-900 mb-2">Do you work with international clients?</h3>
             <p class="text-gray-600">
@@ -141,7 +146,7 @@ import ContactForm from '../components/ContactForm';
               For woodworking, I can discuss shipping options, though local projects are preferred.
             </p>
           </div>
-
+          
           <div class="bg-white rounded-lg p-6 shadow-sm">
             <h3 class="font-semibold text-gray-900 mb-2">What makes your approach unique?</h3>
             <p class="text-gray-600">
@@ -154,5 +159,7 @@ import ContactForm from '../components/ContactForm';
     </section>
   </main>
 
+  <SectionDivider bottomColor="#1e2939" topColor="#fbf9fa" />
+  
   <Footer />
 </Layout> 
