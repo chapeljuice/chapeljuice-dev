@@ -1,5 +1,115 @@
 @import "tailwindcss";
 
+/* Silkscreen Font */
+.silkscreen-regular {
+  font-family: "Silkscreen", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Rocket vibration animation */
+@keyframes rocket-vibrate {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg); 
+  }
+  10% { 
+    transform: translate(-1px, -1px) rotate(-0.5deg); 
+  }
+  20% { 
+    transform: translate(1px, -1px) rotate(0.5deg); 
+  }
+  30% { 
+    transform: translate(-1px, 1px) rotate(-0.5deg); 
+  }
+  40% { 
+    transform: translate(1px, 1px) rotate(0.5deg); 
+  }
+  50% { 
+    transform: translate(-1px, -1px) rotate(-0.5deg); 
+  }
+  60% { 
+    transform: translate(1px, -1px) rotate(0.5deg); 
+  }
+  70% { 
+    transform: translate(-1px, 1px) rotate(-0.5deg); 
+  }
+  80% { 
+    transform: translate(1px, 1px) rotate(0.5deg); 
+  }
+  90% { 
+    transform: translate(-1px, -1px) rotate(-0.5deg); 
+  }
+}
+
+.rocket-emoji {
+  display: inline-block;
+  transition: transform 0.1s ease;
+}
+
+.rocket:hover .rocket-emoji {
+  animation: rocket-vibrate 0.3s ease-in-out infinite;
+}
+
+/* Wave animation */
+@keyframes wave-hand {
+  0% { 
+    transform: rotate(0deg); 
+  }
+  10% { 
+    transform: rotate(14deg); 
+  }
+  20% { 
+    transform: rotate(-8deg); 
+  }
+  30% { 
+    transform: rotate(14deg); 
+  }
+  40% { 
+    transform: rotate(-4deg); 
+  }
+  50% { 
+    transform: rotate(10deg); 
+  }
+  60% { 
+    transform: rotate(0deg); 
+  }
+  100% { 
+    transform: rotate(0deg); 
+  }
+}
+
+.wave-emoji {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  transition: transform 0.3s ease;
+}
+
+.wave:hover .wave-emoji {
+  animation: wave-hand 1s ease-in-out infinite;
+}
+
+/* Expanding underline animation for text links */
+a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"]) {
+  position: relative;
+  text-decoration: none;
+}
+
+a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"])::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"]):hover::after {
+  width: 100%;
+}
+
 /* Custom utilities for better text handling */
 .line-clamp-3 {
   display: -webkit-box;

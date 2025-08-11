@@ -30,77 +30,14 @@ const projects = projectsData;
     <!-- Projects Grid -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Filter Buttons -->
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
-          <button class="filter-btn active bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition-colors" data-filter="all">
-            All Projects
-          </button>
-          <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors" data-filter="Web Development">
-            Web Development
-          </button>
-          <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors" data-filter="Engineering Management">
-            Engineering Management
-          </button>
-        </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <ProjectCard project={project} client:load />
+            <ProjectCard project={project} />
           ))}
         </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="py-20 bg-gray-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">
-          Have a Project in Mind?
-        </h2>
-        <p class="text-xl text-gray-600 mb-8">
-          I'm always interested in discussing new opportunities and challenges. 
-          Let's talk about how I can help bring your ideas to life.
-        </p>
-        <a 
-          href="/contact" 
-          class="inline-block bg-amber-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-amber-700 transition-colors"
-        >
-          Start a Conversation
-        </a>
       </div>
     </section>
   </main>
 
   <Footer />
-
-  <script>
-    // Filter functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const filterButtons = document.querySelectorAll('.filter-btn');
-      const projectCards = document.querySelectorAll('[data-category]');
-      
-      filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          const filter = button.getAttribute('data-filter');
-          
-          // Update button states
-          filterButtons.forEach(btn => {
-            btn.classList.remove('active', 'bg-amber-600', 'text-white');
-            btn.classList.add('bg-gray-200', 'text-gray-700');
-          });
-          button.classList.add('active', 'bg-amber-600', 'text-white');
-          button.classList.remove('bg-gray-200', 'text-gray-700');
-          
-          // Filter projects
-          projectCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
-      });
-    });
-  </script>
-</Layout> 
+</Layout>

@@ -5,10 +5,11 @@ interface Project {
   technologies: string[];
   category: string;
   year: string;
-  status: string;
-  image: string;
-  link: string | null;
-  github: string | null;
+  status: 'Completed' | 'In Progress';
+  link?: string;
+  github?: string;
+  image?: string;
+  featured?: boolean;
 }
 
 interface ProjectCardProps {
@@ -17,18 +18,18 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden" data-category={project.category}>
+    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
       <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
         <span className="text-gray-500 text-sm">Project Image</span>
       </div>
       
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm text-amber-600 font-semibold">{project.category}</span>
+          <span className="text-sm text-teal-600 font-semibold">{project.category}</span>
           <span className="text-sm text-gray-500">{project.year}</span>
         </div>
         
-        <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+        <h3 className="text-xl font-bold text-gray-900 mb-3 silkscreen-regular">{project.title}</h3>
         
         <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
         
@@ -63,7 +64,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-amber-600 hover:text-amber-700 font-medium text-sm"
+                className="text-teal-600 hover:text-teal-700 font-medium text-sm"
               >
                 View Live →
               </a>
@@ -85,4 +86,4 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   );
 };
 
-export default ProjectCard; 
+export default ProjectCard;

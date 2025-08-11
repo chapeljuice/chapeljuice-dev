@@ -6,7 +6,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-teal-300 mb-4 silkscreen-regular">Walnut & Web</h3>
             <p className="text-gray-300">
-              Web development, engineering management consulting, and custom woodworking.
+              Web development and engineering management consulting.
             </p>
           </div>
           
@@ -16,7 +16,6 @@ const Footer = () => {
               <li>Web Development</li>
               <li>Engineering Management</li>
               <li>Technical Consulting</li>
-              <li>Custom Woodworking</li>
             </ul>
           </div>
           
