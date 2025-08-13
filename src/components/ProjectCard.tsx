@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 interface Project {
   id: string;
   title: string;
@@ -7,20 +9,37 @@ interface Project {
   year: string;
   status: string;
   link?: string;
-  github?: string;
+  github?: string | null;
   image?: string;
   featured?: boolean;
 }
 
 interface ProjectCardProps {
   project: Project;
+  onClick?: () => void;
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-      <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-        <span className="text-gray-500 text-sm">Project Image</span>
+    <div 
+      className="bg-white rounded-xl smooth-card overflow-hidden cursor-pointer group"
+      onClick={onClick}
+    >
+      <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-gray-200 group-hover:to-gray-300">
+        {project.image ? (
+          <img 
+            src={project.image} 
+            alt={`${project.title} screenshot`}
+            className="w-full h-full object-cover smooth-scale opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.1s_forwards]"
+            loading="eager"
+          />
+        ) : (
+          <div className="flex items-center justify-center h-full">
+            <span className="text-gray-500 text-sm transition-transform duration-[180ms] ease-out group-hover:scale-110">
+              Click to view details
+            </span>
+          </div>
+        )}
       </div>
       
       <div className="p-6">

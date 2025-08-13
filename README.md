@@ -1,10 +1,10 @@
-# Walnut & Web Portfolio
+# Chapeljuice.dev - Ryan Chapel's Portfolio
 
-A modern portfolio website showcasing web development expertise and custom woodworking, built with Astro, React, and Tailwind CSS.
+A modern portfolio website showcasing web development expertise, built with Astro, React, and Tailwind CSS.
 
 ## 🚀 Features
 
-- **Dual Portfolio**: Showcases both technical projects and woodworking creations
+- **Portfolio**: Showcases both individual and company-led technical projects
 - **Modern Design**: Clean, responsive design with smooth animations
 - **Fast Performance**: Astro's static site generation for optimal loading speeds
 - **Interactive Components**: React components for dynamic filtering and forms
@@ -27,18 +27,15 @@ src/
 │   ├── Navigation.tsx   # Main navigation
 │   ├── Footer.tsx       # Site footer
 │   ├── ProjectCard.tsx  # Project display component
-│   ├── ProductCard.tsx  # Product display component
 │   └── ContactForm.tsx  # Contact form
 ├── data/               # JSON data files
 │   ├── projects.json   # Technical projects data
-│   └── products.json   # Woodworking products data
 ├── layouts/            # Astro layouts
 │   └── Layout.astro    # Main page layout
 ├── pages/              # Site pages
 │   ├── index.astro     # Homepage
 │   ├── about.astro     # About page
 │   ├── projects.astro  # Projects showcase
-│   ├── products.astro  # Woodworking products
 │   └── contact.astro   # Contact page
 └── styles/
     └── global.css      # Global styles and utilities
@@ -56,7 +53,7 @@ src/
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd walnutandweb
+cd ryanchapel
 ```
 
 2. Install dependencies:
@@ -89,27 +86,6 @@ Edit `src/data/projects.json` to add your technical projects:
   "image": "/images/project-image.jpg",
   "link": "https://project-url.com",
   "github": "https://github.com/username/repo"
-}
-```
-
-### Adding Woodworking Products
-
-Edit `src/data/products.json` to showcase your woodworking:
-
-```json
-{
-  "id": "unique-id",
-  "name": "Product Name",
-  "description": "Product description",
-  "category": "Furniture",
-  "materials": ["Oak", "Steel Hardware"],
-  "dimensions": "24\" L x 18\" W x 30\" H",
-  "price": 850,
-  "status": "Available",
-  "images": ["/images/product-1.jpg"],
-  "featured": true,
-  "craftingTime": "3 weeks",
-  "year": "2024"
 }
 ```
 

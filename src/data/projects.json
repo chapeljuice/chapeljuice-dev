@@ -1,33 +1,60 @@
 [
   {
     "id": "1",
-    "title": "LPGA.com & LPGA Mobile App",
-    "description": "A modern e-commerce platform built with React and Node.js, featuring real-time inventory management, payment processing, and admin dashboard.",
-    "technologies": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-    "category": "Team / Company",
-    "year": "2024",
-    "status": "Completed",
-    "link": "https://example.com",
-    "github": "https://github.com/example",
-    "featured": true
+    "title": "Brewery Site Upgrades",
+    "description": "I provide custom website solutions for breweries that incorporate clean design and a dead simple way to update their current tap list.",
+    "technologies": ["AI", "TypeScript", "HTML", "CSS"],
+    "category": "Freelance / Independent",
+    "year": "2025",
+    "status": "In Progress",
+    "featured": true,
+    "github": "https://github.com/chapeljuice/brewery-base",
+    "image": "/images/project-screens/self-formulabrewing.png"
   },
   {
     "id": "2",
-    "title": "Team Management Dashboard",
-    "description": "Internal tool for tracking team performance, project timelines, and resource allocation. Improved team efficiency by 40%.",
-    "technologies": ["Vue.js", "Python", "FastAPI", "MongoDB"],
+    "title": "Custom 3D Furniture Visualizer",
+    "description": "I'm working on a custom 3D furniture visualizer that allows users to upload their own furniture images and see how they would look in their home.",
+    "technologies": ["React", "TypeScript", "Three.js", "AI", "CSS Modules"],
     "category": "Freelance / Independent",
-    "year": "2023",
-    "status": "Completed",
-    "featured": true
+    "year": "2025",
+    "status": "In Progress",
+    "github": "https://github.com/chapeljuice/pegwall-visualizer",
+    "image": "/images/project-screens/kerf-wall-visualizer.png"
   },
   {
     "id": "3",
-    "title": "Mobile Banking App",
-    "description": "Secure mobile banking application with biometric authentication, transaction history, and real-time notifications.",
-    "technologies": ["React Native", "TypeScript", "Firebase"],
+    "title": "LPGA.com & LPGA Mobile App",
+    "description": "I was the lead front-end developer for the LPGA.com and LPGA Mobile App. I was responsible for the front-end team, and the development of all the UI components and pages. I worked closedly with the project manager to ensure the project stayed on track and we had the appropriate resources in order to complete the project on time. I also demoed our progress regularly to the client, and was in charge of deployments including production releases.",
+    "technologies": ["React", "TypeScript", "React Native", "Tamagui", "AWS", "Next.js"],
+    "category": "Team / Company",
+    "year": "2024",
+    "status": "Completed",
+    "link": "https://lpga.com",
+    "github": null,
+    "featured": true,
+    "image": "/images/project-screens/hero-lpga.png"
+  },
+  {
+    "id": "4",
+    "title": "PaperNFTs",
+    "description": "Designed, developed, and launched a full dynamically-generated NFT collection utilizing Web3 technology. The NFTs were generated using pictures I took of actual construction paper cut-outs that I cut out by hand, took pictures of, and then uploaded with transparent backgrounds. Those images were then used to construct a full NFT composed of multiple images in random patterns that portrayed unique landscapes. I Implemented smart contracts, metadata generation, and blockchain integration to ensure secure and decentralized asset ownership. I also managed the entire development lifecycle, from concept and design to deployment and marketing.",
+    "technologies": ["React", "TypeScript", "Next.js", "Solidity"],
     "category": "Freelance / Independent",
+    "year": "2025",
+    "status": "Completed",
+    "link": "https://www.papernfts.com",
+    "image": "/images/project-screens/self-papernfts.jpeg"
+  },
+  {
+    "id": "5",
+    "title": "Freedom Boat Club Reservations System",
+    "description": "I was the lead front-end developer for creating a new reservations system for Freedom Boat Club. The content was managed by Adobe Experience Manager, and the site was made for both members and staff who needed to manage reservations and get their customers out on the water.",
+    "technologies": ["Adobe AEM", "React"],
+    "category": "Team / Company",
     "year": "2023",
-    "status": "In Progress"
+    "status": "Completed",
+    "github": null,
+    "image": "/images/project-screens/avionos-freedomboatclub.png"
   }
 ]

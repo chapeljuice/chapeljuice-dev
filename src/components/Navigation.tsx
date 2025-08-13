@@ -21,7 +21,7 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
           <div className="flex items-center">
             <a href="/" className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-bold text-teal-600 silkscreen-regular">
-                Walnut & Web
+                Ryan Chapel
               </span>
             </a>
           </div>

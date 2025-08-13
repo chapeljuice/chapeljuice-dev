@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SectionDivider from '../components/SectionDivider';
 ---
 
-<Layout title="About - Walnut & Web" description="Learn about my journey in web development, engineering management, and woodworking">
+<Layout title="About - Ryan Chapel" description="Learn about my journey in web development, engineering management, and consulting">
   <Navigation client:load currentPath={Astro.url.pathname} />
   
   <main>
@@ -14,11 +14,10 @@ import SectionDivider from '../components/SectionDivider';
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 silkscreen-regular">
-            Where Code Meets Craft
+            About Me 📢
           </h1>
           <p class="text-xl text-gray-700 mb-8">
-            My journey from pixels to planks, bringing the same dedication to quality 
-            in both digital solutions and handcrafted woodwork.
+            I've spent over a decade building websites and leading engineering teams, helping companies scale projects from idea to millions of users. My passion lies in creating useful, relatable solutions that make a real impact.
           </p>
         </div>
       </div>
@@ -31,26 +30,21 @@ import SectionDivider from '../components/SectionDivider';
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">My Story</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">My Professional Journey</h2>
             <div class="prose prose-lg text-gray-600">
               <p class="mb-4">
-                I've spent over a decade building digital experiences and leading engineering teams, 
-                helping startups scale from MVP to millions of users. My passion lies in creating 
-                robust, scalable solutions that make a real impact.
+                I've been interested in design and technology ever since I was a little kid, and grew up in the golden age of the web - so I knew from a fairly early age I wanted to create websites.
               </p>
               <p class="mb-4">
-                From front-end interfaces to complex backend systems, I enjoy the entire development lifecycle. 
-                The same attention to detail, problem-solving skills, and commitment to quality that 
-                drives my technical work extends to mentoring teams and optimizing development processes.
+                The design part of my brain focused on front-end development at first, and that's where I've stayed for most of my career - working on quite a few high-traffic websites including sites for the LPGA (<a href="https://lpga.com" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700">lpga.com</a>), University of Phoenix (<a href="https://phoenix.edu" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700">phoenix.edu</a>), many Brunswick Boat sites (<a href="https://bayliner.com" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700">bayliner.com</a>, <a href="https://freedomboatclub.com" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700">freedomboatclub.com</a>), and many more. I've also transitioned into engineering management and help teams and individuals ship products better, and grow in their careers.
               </p>
               <p>
-                Today, I focus on helping companies build better software and grow their engineering capabilities. 
-                Both require patience, precision, and a deep understanding of your tools and team dynamics.
+                Nowadays, I do all that plus I'm focusing a bit on helping smaller, local companies grow their online presence. I specialize in identifying improvements to websites that make these businesses grow their audience and gain more customers and web traffic.
               </p>
             </div>
           </div>
           <div class="bg-gradient-to-br from-amber-100 to-orange-200 h-96 rounded-xl flex items-center justify-center">
-            <span class="text-gray-500 text-lg">Personal Photo</span>
+            <img src="/images/me-white-sunnys-o.jpg" alt="Ryan Chapel" class="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
       </div>
@@ -70,49 +64,50 @@ import SectionDivider from '../components/SectionDivider';
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <!-- Technical Skills -->
-          <div class="bg-white p-8 rounded-xl shadow-lg">
-            <div class="text-blue-600 mb-4">
+          <div class="bg-white p-8 rounded-xl smooth-card group">
+            <div class="text-teal-600 mb-4 smooth-scale">
               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
               </svg>
             </div>
             <h3 class="text-xl font-bold text-gray-900 mb-4">Technical Expertise</h3>
             <div class="space-y-3">
               <div>
                 <h4 class="font-semibold text-gray-900">Languages & Frameworks</h4>
-                <p class="text-gray-600 text-sm">JavaScript/TypeScript, React, Vue.js, Node.js, Python, Go</p>
+                <p class="text-gray-600 text-sm">TypeScript/JavaScript, React, React Native, Node.js, Next.js, Express.js, Tamagui, Astro, Tailwind, HTML, CSS/Sass</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">CMS & Platforms</h4>
+                <p class="text-gray-600 text-sm">Adobe Experience Manager, Sitecore (headless), Squarespace, Shopify, and more.</p>
               </div>
               <div>
                 <h4 class="font-semibold text-gray-900">Infrastructure & DevOps</h4>
-                <p class="text-gray-600 text-sm">AWS, Docker, Kubernetes, CI/CD, Terraform</p>
-              </div>
-              <div>
-                <h4 class="font-semibold text-gray-900">Leadership & Management</h4>
-                <p class="text-gray-600 text-sm">Team scaling, technical strategy, process optimization</p>
+                <p class="text-gray-600 text-sm">AWS, Google Cloud, Firebase, Vercel, CI/CD, Git, GitHub, Bitbucket</p>
               </div>
             </div>
           </div>
-          
-          <!-- Woodworking Skills -->
-          <div class="bg-white p-8 rounded-xl shadow-lg">
-            <div class="text-teal-600 mb-4">
+
+
+          <!-- Personal Skills -->
+          <div class="bg-white p-8 rounded-xl smooth-card group">
+            <div class="text-teal-600 mb-4 smooth-scale">
               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Woodworking Craft</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Personal Skills</h3>
             <div class="space-y-3">
               <div>
-                <h4 class="font-semibold text-gray-900">Traditional Joinery</h4>
-                <p class="text-gray-600 text-sm">Mortise & tenon, dovetails, hand-cut joints</p>
+                <h4 class="font-semibold text-gray-900">Identifying Growth Opportunities</h4>
+                <p class="text-gray-600 text-sm">I can easily find new areas for improvement in your online presence and help you implement changes to scale your business!</p>
               </div>
               <div>
-                <h4 class="font-semibold text-gray-900">Specialty Work</h4>
-                <p class="text-gray-600 text-sm">Live edge slabs, custom furniture, kitchen accessories</p>
+                <h4 class="font-semibold text-gray-900">Communication</h4>
+                <p class="text-gray-600 text-sm">I'm easy to talk to, like to have fun, and I'm able to explain complex ideas in a way that is easy to understand.</p>
               </div>
               <div>
-                <h4 class="font-semibold text-gray-900">Finishing Techniques</h4>
-                <p class="text-gray-600 text-sm">Hand-rubbed oils, shellac, food-safe finishes</p>
+                <h4 class="font-semibold text-gray-900">Leadership & Management</h4>
+                <p class="text-gray-600 text-sm">Team scaling, technical strategy, process optimization, and more.</p>
               </div>
             </div>
           </div>
@@ -128,7 +123,7 @@ import SectionDivider from '../components/SectionDivider';
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">Core Values</h2>
           <p class="text-xl text-gray-600">
-            The principles that guide both my code and my craft.
+            I try to live by these principles in both my personal, and professional life.
           </p>
         </div>
 
@@ -139,10 +134,9 @@ import SectionDivider from '../components/SectionDivider';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Quality First</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Empathy & Trust</h3>
             <p class="text-gray-600">
-              Whether writing code or cutting dovetails, I believe in doing things right 
-              the first time and building for the long term.
+              I believe in being open and honest with each other, and listening to ideas and feedback.<br /><br />Being able to empathize with others and understand their perspective is key to building strong relationships.
             </p>
           </div>
 
@@ -152,23 +146,21 @@ import SectionDivider from '../components/SectionDivider';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Sustainable Practices</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Helping Others</h3>
             <p class="text-gray-600">
-              From clean code that's maintainable to sustainably sourced lumber, 
-              I care about the environmental impact of my work.
+              I'm aware of my own position in the world, and I'm always looking for ways to help others.<br /><br />I want to be seen as a positive presence in the world, and I also like to push myself to improve in many areas of my life.
             </p>
           </div>
 
           <div class="text-center">
             <div class="text-teal-600 mb-4">
               <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Continuous Learning</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Have Fun</h3>
             <p class="text-gray-600">
-              Technology evolves rapidly, and traditional crafts have centuries of wisdom. 
-              I'm always learning and improving in both domains.
+              Often times business is serious, but I believe in still having fun and enjoying the journey.<br /><br />I'll always try to find a fun way to work together and make the experience enjoyable for everyone involved.
             </p>
           </div>
         </div>
@@ -184,8 +176,7 @@ import SectionDivider from '../components/SectionDivider';
           Let's Build Something Together
         </h2>
         <p class="text-xl text-gray-600 mb-8">
-          Whether you need a digital solution or a custom piece of furniture, 
-          I'd love to hear about your project and explore how we can work together.
+          I'd love to hear about your project or ideas, and explore how we can work together.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a 

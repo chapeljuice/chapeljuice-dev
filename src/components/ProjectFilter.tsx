@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ProjectCard from './ProjectCard';
+import ProjectModal from './ProjectModal';
 
 interface Project {
   id: string;
@@ -10,7 +11,7 @@ interface Project {
   year: string;
   status: string;
   link?: string;
-  github?: string;
+  github?: string | null;
   image?: string;
   featured?: boolean;
 }
@@ -21,6 +22,18 @@ interface ProjectFilterProps {
 
 const ProjectFilter = ({ projects }: ProjectFilterProps) => {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
 
   // Get unique categories
   const categories = ['All', ...Array.from(new Set(projects.map(project => project.category)))];
@@ -60,9 +73,20 @@ const ProjectFilter = ({ projects }: ProjectFilterProps) => {
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard 
+            key={project.id} 
+            project={project} 
+            onClick={() => handleProjectClick(project)}
+          />
         ))}
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal 
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
 
       {/* No results message */}
       {filteredProjects.length === 0 && (

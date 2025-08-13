@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SectionDivider from '../components/SectionDivider';
 ---
 
-<Layout title="Walnut & Web - Web Development & Custom Woodworking">
+<Layout title="Ryan Chapel - Web Development & Engineering Consulting">
   <Navigation client:load currentPath={Astro.url.pathname} />
   
   <main>
@@ -51,35 +51,34 @@ import SectionDivider from '../components/SectionDivider';
             What I Do ✨
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Where pixels meet the road! Combining technical expertise with down-to-earth solutions to deliver exceptional results.
+            I'm a web developer and engineering leader that's worked at startups, agencies, and enterprise companies. Now I'm helping smaller businesses grow with my ideas, skills, and experience.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Web Development -->
-          <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg hover:-translate-y-2 hover:bg-gradient-to-br hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 group cursor-pointer">
-            <div class="text-teal-600 mb-4 group-hover:scale-110 transition-transform duration-300">
+          <div class="bg-gray-50 p-8 rounded-xl smooth-card hover:bg-gradient-to-br hover:from-blue-50 hover:to-indigo-50 transition-colors duration-[180ms] ease-out group">
+            <div class="text-teal-600 mb-4 smooth-scale">
               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
               </svg>
             </div>
             <h3 class="text-xl font-bold text-gray-900 mb-3 silkscreen-regular">💻 Web Development</h3>
             <p class="text-gray-600">
-              Crafting modern, responsive websites that actually work (and look great doing it!). 
-              From that first spark of an idea to going live, I build digital experiences that perform beautifully and are easy to update and maintain.
+              Everything from a small website update, to a full-stack application with custom features - I can help you bring your ideas to life.<br /><br />Unsure how to start? I can analyze your website and provide you with options to improve your customer's experience and get you more business.
             </p>
           </div>
 
           <!-- Engineering Management -->
-          <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg hover:-translate-y-2 hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50 transition-all duration-300 group cursor-pointer">
-            <div class="text-teal-600 mb-4 group-hover:scale-110 transition-transform duration-300">
+          <div class="bg-gray-50 p-8 rounded-xl smooth-card hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50 transition-colors duration-[180ms] ease-out group">
+            <div class="text-teal-600 mb-4 smooth-scale">
               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
               </svg>
             </div>
             <h3 class="text-xl font-bold text-gray-900 mb-3 silkscreen-regular">🎯 Engineering Management</h3>
             <p class="text-gray-600">
-              I help grow teams and mentor developers. Team goal setting, technical strategy, and process optimization. My teams deliver results efficiently and on-time.
+              I help grow teams and mentor developers. Project roadmaps & management, technical strategy, and process optimization. My teams deliver results efficiently and on-time.<br /><br />I also help junior developers grow through mentorship and guidance.
             </p>
           </div>
 
@@ -94,7 +93,7 @@ import SectionDivider from '../components/SectionDivider';
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 silkscreen-regular">
-            Featured Work 🎨
+            My Work 🎨
           </h2>
           <p class="text-xl text-gray-600">
             The good stuff! Here's a peek at what I've been cooking up lately.
@@ -102,9 +101,9 @@ import SectionDivider from '../components/SectionDivider';
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-            <div class="h-64 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center group-hover:from-blue-200 group-hover:to-indigo-300 transition-all duration-300">
-              <span class="text-gray-500 text-lg group-hover:scale-110 transition-transform duration-300">💻 Web Project Preview</span>
+          <div class="bg-white rounded-xl overflow-hidden smooth-card group">
+            <div class="h-64 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-blue-200 group-hover:to-indigo-300">
+              <img src="/images/project-screens/hero-lpga.png" alt="LPGA Project Preview" class="w-full h-full object-cover smooth-scale" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2 silkscreen-regular">Portfolio</h3>
@@ -118,9 +117,9 @@ import SectionDivider from '../components/SectionDivider';
             </div>
           </div>
 
-          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-            <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center group-hover:from-amber-200 group-hover:to-orange-300 transition-all duration-300">
-              <span class="text-gray-500 text-lg group-hover:scale-110 transition-transform duration-300">🪵 Resume Preview</span>
+          <div class="bg-white rounded-xl overflow-hidden smooth-card group">
+            <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-amber-200 group-hover:to-orange-300">
+              <img src="/images/resume-screen.png" alt="Resume Preview" class="w-full h-full object-cover object-top smooth-scale" />
             </div>
             <div class="p-6">
             <h3 class="text-xl font-bold text-gray-900 mb-2 silkscreen-regular">Resume</h3>
