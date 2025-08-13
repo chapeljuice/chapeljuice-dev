@@ -14,6 +14,9 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   
+  // Ensure public assets are handled correctly
+  publicDir: 'public',
+  
   vite: {
     plugins: [tailwindcss()],
     build: {
