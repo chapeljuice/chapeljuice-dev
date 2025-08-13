@@ -14,17 +14,11 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   
+  // Ensure static assets are copied correctly
+  publicDir: 'public',
+  
   vite: {
     plugins: [tailwindcss()],
-    build: {
-      rollupOptions: {
-        output: {
-          assetFileNames: 'assets/[name].[hash][extname]',
-          chunkFileNames: 'assets/[name].[hash].js',
-          entryFileNames: 'assets/[name].[hash].js',
-        },
-      },
-    },
   },
   
   // SEO and performance optimizations
