@@ -38,8 +38,8 @@ const ProjectFilter = ({ projects }: ProjectFilterProps) => {
   // Get unique categories
   const categories = ['All', ...Array.from(new Set(projects.map(project => project.category)))];
 
-  // Filter projects based on active filter
-  const filteredProjects = activeFilter === 'All' 
+  // Count visible projects for display
+  const visibleProjects = activeFilter === 'All' 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
 
@@ -65,20 +65,34 @@ const ProjectFilter = ({ projects }: ProjectFilterProps) => {
       {/* Projects Count */}
       <div className="text-center mb-8">
         <p className="text-gray-600">
-          Showing {filteredProjects.length} {filteredProjects.length === 1 ? 'project' : 'projects'}
+          Showing {visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}
           {activeFilter !== 'All' && ` in ${activeFilter}`}
         </p>
       </div>
 
-      {/* Projects Grid */}
+      {/* Projects Grid - All projects stay in DOM, filtered with CSS */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredProjects.map((project) => (
-          <ProjectCard 
-            key={project.id} 
-            project={project} 
-            onClick={() => handleProjectClick(project)}
-          />
-        ))}
+        {projects.map((project) => {
+          const isVisible = activeFilter === 'All' || project.category === activeFilter;
+          return (
+            <div 
+              key={project.id}
+              className={`transition-all duration-300 ${
+                isVisible 
+                  ? 'opacity-100 scale-100' 
+                  : 'opacity-0 scale-95 pointer-events-none'
+              }`}
+              style={{ 
+                display: isVisible ? 'block' : 'none'
+              }}
+            >
+              <ProjectCard 
+                project={project} 
+                onClick={() => handleProjectClick(project)}
+              />
+            </div>
+          );
+        })}
       </div>
 
       {/* Project Modal */}
@@ -89,7 +103,7 @@ const ProjectFilter = ({ projects }: ProjectFilterProps) => {
       />
 
       {/* No results message */}
-      {filteredProjects.length === 0 && (
+      {visibleProjects.length === 0 && (
         <div className="text-center py-12">
           <p className="text-gray-500 text-lg mb-4">No projects found in this category.</p>
           <button
