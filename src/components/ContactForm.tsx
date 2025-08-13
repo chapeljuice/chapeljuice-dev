@@ -43,7 +43,7 @@ const ContactForm = () => {
         </p>
         <button
           onClick={() => setSubmitStatus('idle')}
-          className="text-green-600 hover:text-green-700 font-medium silkscreen-regular"
+          className="text-teal-600 hover:text-teal-700 font-medium silkscreen-regular cursor-pointer contact-form-button"
         >
           Send Another Message
         </button>
@@ -87,7 +87,7 @@ const ContactForm = () => {
 
       <div>
         <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
-          Project Type *
+          Reason for Contacting *
         </label>
         <select
           id="projectType"
@@ -97,10 +97,11 @@ const ContactForm = () => {
           required
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors"
         >
-          <option value="">Select a project type</option>
+          <option value="">Select a reason</option>
           <option value="web-development">Web Development</option>
           <option value="technical-consulting">Technical Consulting</option>
           <option value="engineering-management">Engineering Management</option>
+          <option value="suggestion">Suggestion</option>
           <option value="other">Other</option>
         </select>
       </div>

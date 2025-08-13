@@ -31,7 +31,6 @@
     "year": "2024",
     "status": "Completed",
     "link": "https://lpga.com",
-    "github": null,
     "featured": true,
     "image": "/images/project-screens/hero-lpga.png"
   },
@@ -54,7 +53,17 @@
     "category": "Team / Company",
     "year": "2023",
     "status": "Completed",
-    "github": null,
     "image": "/images/project-screens/avionos-freedomboatclub.png"
+  },
+  {
+    "id": "6",
+    "title": "RedAwning Native App",
+    "description": "I was the lead UI developer at RedAwning and created their native app from scratch using React Native. It allowed their customers to manage their reservations and had cool features like automatically checking in to their vacation rental when they arrived.",
+    "technologies": ["React Native", "JavaScript", "Expo"],
+    "category": "Team / Company",
+    "year": "2024",
+    "status": "Completed",
+    "link": "https://redawning.com",
+    "image": "/images/project-screens/redawning-app.jpg"
   }
 ]

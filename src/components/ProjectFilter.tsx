@@ -11,7 +11,7 @@ interface Project {
   year: string;
   status: string;
   link?: string;
-  github?: string | null;
+  github?: string;
   image?: string;
   featured?: boolean;
 }

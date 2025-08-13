@@ -22,10 +22,10 @@ interface ProjectCardProps {
 const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
   return (
     <div 
-      className="bg-white rounded-xl smooth-card overflow-hidden cursor-pointer group"
+      className="bg-white rounded-xl smooth-card overflow-hidden cursor-pointer group flex flex-col h-full"
       onClick={onClick}
     >
-      <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-gray-200 group-hover:to-gray-300">
+      <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-gray-200 group-hover:to-gray-300 relative">
         {project.image ? (
           <img 
             src={project.image} 
@@ -40,9 +40,19 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
             </span>
           </div>
         )}
+        
+        <div className="absolute top-3 right-3">
+          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+            project.status === 'Completed' 
+              ? 'bg-green-100 text-green-800' 
+              : 'bg-yellow-100 text-yellow-800'
+          }`}>
+            {project.status}
+          </span>
+        </div>
       </div>
       
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm text-teal-600 font-semibold">{project.category}</span>
           <span className="text-sm text-gray-500">{project.year}</span>
@@ -68,15 +78,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
           )}
         </div>
         
-        <div className="flex items-center justify-between">
-          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-            project.status === 'Completed' 
-              ? 'bg-green-100 text-green-800' 
-              : 'bg-yellow-100 text-yellow-800'
-          }`}>
-            {project.status}
-          </span>
-          
+        <div className="flex items-center justify-end mt-auto">
           <div className="flex gap-2">
             {project.link && (
               <a 

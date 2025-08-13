@@ -127,6 +127,28 @@ a:not(.btn):not(.button):not([class*="bg-"]):not([class*="border-"]):not(.nav-ac
   transform: translateX(-50%);
 }
 
+/* Animated underline for contact form button */
+.contact-form-button {
+  position: relative;
+  text-decoration: none;
+}
+
+.contact-form-button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.contact-form-button:hover::after {
+  width: 100%;
+}
+
 /* Custom utilities for better text handling */
 .line-clamp-3 {
   display: -webkit-box;
