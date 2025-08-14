@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+/* CSS Custom Properties for Theme Colors */
+:root {
+  --primary-color: #008080;
+  --primary-hover: #006666;
+  --primary-light: #00a3a3;
+  --primary-lighter: #00cccc;
+  --primary-dark: #004d4d;
+  --primary-darker: #003333;
+}
+
+/* Orange Theme */
+body.orange-theme {
+  --primary-color: #ee5418;
+  --primary-hover: #d14a15;
+  --primary-light: #f2672e;
+  --primary-lighter: #f67a44;
+  --primary-dark: #b84212;
+  --primary-darker: #a23a0f;
+}
+
 * {
   font-family: "futura-pt", sans-serif;
 }
@@ -28,15 +48,89 @@
 
 .main-logo {
   animation: pulse-logo 2s infinite ease-in-out;
-  background-color: #008080;
+  background-color: var(--primary-color);
   border-radius: 0 50% 50% 50%;
   display: inline-block;
   height: 2rem;
   width: 2rem;
+  transition: background-color 0.3s ease;
 }
 
 .main-logo:hover {
   animation-play-state: paused;
+}
+
+/* Theme-aware utility classes */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.hover\:text-primary:hover {
+  color: var(--primary-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--primary-color);
+}
+
+.bg-primary-hover {
+  background-color: var(--primary-hover);
+}
+
+.hover\:bg-primary-hover:hover {
+  background-color: var(--primary-hover);
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.hover\:border-primary:hover {
+  border-color: var(--primary-color);
+}
+
+.text-primary-hover {
+  color: var(--primary-hover);
+}
+
+.hover\:text-primary-hover:hover {
+  color: var(--primary-hover);
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+
+.bg-primary-lighter {
+  background-color: var(--primary-lighter);
+}
+
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+
+.bg-primary-darker {
+  background-color: var(--primary-darker);
+}
+
+.text-primary-light {
+  color: var(--primary-light);
+}
+
+.text-primary-lighter {
+  color: var(--primary-lighter);
+}
+
+.text-primary-dark {
+  color: var(--primary-dark);
+}
+
+.text-primary-darker {
+  color: var(--primary-darker);
 }
 
 /* Rocket vibration animation */

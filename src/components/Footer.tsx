@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold text-teal-300 mb-4 silkscreen-regular">Ryan Chapel is<br />chapeljuice.dev</h3>
+            <h3 className="text-xl font-bold text-primary-light mb-4 silkscreen-regular">Ryan Chapel is<br />chapeljuice.dev</h3>
             <p className="text-gray-300 mb-6">
               Web development and engineering management consulting.
             </p>
@@ -15,7 +15,7 @@ const Footer = () => {
                 href="https://github.com/chapeljuice" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-teal-400 hover:text-teal-300 transition-colors pb-2"
+                className="text-primary-lighter hover:text-primary-light transition-colors pb-2"
                 aria-label="GitHub"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -27,7 +27,7 @@ const Footer = () => {
                 href="https://bsky.app/profile/chapeljuice.dev" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-teal-400 hover:text-teal-300 transition-colors pb-2"
+                className="text-primary-lighter hover:text-primary-light transition-colors pb-2"
                 aria-label="Bluesky"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 600 530" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/ryanchapel/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-teal-400 hover:text-teal-300 transition-colors pb-2"
+                className="text-primary-lighter hover:text-primary-light transition-colors pb-2"
                 aria-label="LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -64,7 +64,7 @@ const Footer = () => {
               <p>Ready to work together?</p>
               <a 
                 href="/contact" 
-                className="inline-block bg-teal-500 text-white px-6 py-2 rounded-lg hover:bg-teal-600 transition-colors silkscreen-regular"
+                className="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors silkscreen-regular"
               >
                 Get in Touch
               </a>

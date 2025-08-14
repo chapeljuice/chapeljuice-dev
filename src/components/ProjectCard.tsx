@@ -56,7 +56,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
       
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm text-teal-600 font-semibold">{project.category}</span>
+          <span className="text-sm text-primary font-semibold">{project.category}</span>
           <span className="text-sm text-gray-500">{project.year}</span>
         </div>
         
@@ -87,7 +87,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-teal-600 hover:text-teal-700 font-medium text-lg"
+                className="text-primary hover:text-primary-hover font-medium text-lg"
               >
                 View Live →
               </a>

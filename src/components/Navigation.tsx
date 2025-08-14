@@ -6,6 +6,7 @@ interface NavigationProps {
 
 const Navigation = ({ currentPath = '/' }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOrangeTheme, setIsOrangeTheme] = useState(false);
 
   const navItems = [
     { href: '/', label: 'Home' },
@@ -15,14 +16,31 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
     { href: 'https://github.com/chapeljuice', label: 'GitHub', external: true },
   ];
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent the anchor tag from navigating
+    e.stopPropagation(); // Stop event bubbling
+    setIsOrangeTheme(!isOrangeTheme);
+    // Apply theme to document body
+    if (!isOrangeTheme) {
+      document.body.classList.add('orange-theme');
+    } else {
+      document.body.classList.remove('orange-theme');
+    }
+  };
+
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <a href="/" className="bg-home-linkflex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-teal-600 silkscreen-regular flex items-center gap-4">
-                <span className="main-logo"></span><span className="inline-block silkscreen-regular">Ryan Chapel</span>
+              <span className="text-2xl font-bold silkscreen-regular flex items-center gap-4">
+                <span 
+                  className="main-logo"
+                  onClick={handleLogoClick}
+                  style={{ cursor: 'pointer' }}
+                ></span>
+                <span className="inline-block silkscreen-regular">Ryan Chapel</span>
               </span>
             </a>
           </div>
@@ -37,8 +55,8 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
                 rel={item.external ? "noopener noreferrer" : undefined}
                 className={`px-3 py-2 rounded-md text-lg font-medium transition-colors relative ${
                   currentPath === item.href
-                    ? 'text-teal-600 nav-active'
-                    : 'text-gray-700 hover:text-teal-600'
+                    ? 'nav-active'
+                    : 'text-gray-700 hover:text-primary'
                 }`}
               >
                 {item.label}
@@ -50,7 +68,7 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-teal-600 focus:outline-none focus:text-teal-600"
+              className="text-gray-700 hover:text-primary focus:outline-none focus:text-primary"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
@@ -76,8 +94,8 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
                   rel={item.external ? "noopener noreferrer" : undefined}
                   className={`block px-3 py-2 rounded-md text-lg font-medium transition-colors relative ${
                     currentPath === item.href
-                      ? 'text-teal-600 nav-active'
-                      : 'text-gray-700 hover:text-teal-600'
+                      ? 'nav-active'
+                      : 'text-gray-700 hover:text-primary'
                   }`}
                   onClick={() => !item.external && setIsMenuOpen(false)}
                 >

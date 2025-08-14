@@ -53,8 +53,8 @@ const ProjectFilter = ({ projects }: ProjectFilterProps) => {
             onClick={() => setActiveFilter(category)}
             className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 silkscreen-regular ${
               activeFilter === category
-                ? 'bg-teal-600 text-white shadow-lg'
-                : 'bg-gray-100 text-gray-700 hover:bg-teal-100 hover:text-teal-700'
+                ? 'bg-primary text-white shadow-lg'
+                : 'bg-gray-100 text-gray-700 hover:bg-primary-lighter hover:text-primary'
             }`}
           >
             {category}
@@ -108,7 +108,7 @@ const ProjectFilter = ({ projects }: ProjectFilterProps) => {
           <p className="text-gray-500 text-lg mb-4">No projects found in this category.</p>
           <button
             onClick={() => setActiveFilter('All')}
-            className="text-teal-600 hover:text-teal-700 font-medium"
+            className="text-primary hover:text-primary-hover font-medium"
           >
             View all projects
           </button>

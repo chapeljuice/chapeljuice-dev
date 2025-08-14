@@ -122,7 +122,7 @@ const ContactForm = () => {
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors silkscreen-regular ${
           isSubmitting
             ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            : 'bg-teal-600 text-white hover:bg-teal-700'
+            : 'bg-primary text-white hover:bg-primary-hover'
         }`}
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
