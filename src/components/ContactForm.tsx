@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,7 +8,15 @@ const ContactForm = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  // Check for success/error in URL params (Netlify redirects)
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+      // Show success message
+      alert('Thank you! Your message has been sent successfully.');
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -17,42 +25,27 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', projectType: '', message: '' });
-    }, 1000);
+    // Let the form submit naturally to Netlify
   };
 
-  if (submitStatus === 'success') {
-    return (
-      <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-        <div className="text-green-600 mb-4">
-          <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-          </svg>
-        </div>
-        <h3 className="text-lg font-semibold text-green-900 mb-2">Message Sent!</h3>
-        <p className="text-green-700 mb-4">
-          Thank you for reaching out. I'll get back to you within 1-2 business days.
-        </p>
-        <button
-          onClick={() => setSubmitStatus('idle')}
-          className="text-teal-600 hover:text-teal-700 font-medium silkscreen-regular cursor-pointer contact-form-button"
-        >
-          Send Another Message
-        </button>
-      </div>
-    );
-  }
-
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form 
+      onSubmit={handleSubmit} 
+      className="space-y-6"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="/contact?success=true"
+    >
+      {/* Netlify form detection */}
+      <input type="hidden" name="form-name" value="contact" />
+      <div className="hidden">
+        <input name="bot-field" />
+      </div>
+
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
           Name *

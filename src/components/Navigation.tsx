@@ -32,7 +32,7 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
               <a
                 key={item.href}
                 href={item.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors relative ${
+                className={`px-3 py-2 rounded-md text-lg font-medium transition-colors relative ${
                   currentPath === item.href
                     ? 'text-teal-600 nav-active'
                     : 'text-gray-700 hover:text-teal-600'
@@ -64,12 +64,12 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors relative ${
+                  className={`block px-3 py-2 rounded-md text-lg font-medium transition-colors relative ${
                     currentPath === item.href
                       ? 'text-teal-600 nav-active'
                       : 'text-gray-700 hover:text-teal-600'
