@@ -48,7 +48,7 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="name" className="block text-lg font-medium text-gray-700 mb-2">
           Name *
         </label>
         <input
@@ -64,7 +64,7 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="email" className="block text-lg font-medium text-gray-700 mb-2">
           Email *
         </label>
         <input
@@ -80,7 +80,7 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="projectType" className="block text-lg font-medium text-gray-700 mb-2">
           Reason for Contacting *
         </label>
         <select
@@ -101,7 +101,7 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="message" className="block text-lg font-medium text-gray-700 mb-2">
           Message *
         </label>
         <textarea
@@ -128,7 +128,7 @@ const ContactForm = () => {
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
 
-      <p className="text-sm text-gray-500 text-center">
+      <p className="text-lg text-gray-500 text-center">
         * Required fields. I respect your privacy and will never share your information.
       </p>
     </form>

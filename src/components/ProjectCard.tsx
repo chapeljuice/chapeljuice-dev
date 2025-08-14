@@ -87,7 +87,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-teal-600 hover:text-teal-700 font-medium text-sm"
+                className="text-teal-600 hover:text-teal-700 font-medium text-lg"
               >
                 View Live →
               </a>
@@ -97,7 +97,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-700 font-medium text-sm"
+                className="text-gray-600 hover:text-gray-700 font-medium text-lg"
               >
                 GitHub →
               </a>
