@@ -21,7 +21,7 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
           <div className="flex items-center">
             <a href="/" className="bg-home-linkflex-shrink-0 flex items-center">
               <span className="text-2xl font-bold text-teal-600 silkscreen-regular flex items-center gap-4">
-                <span className="main-logo"></span><span className="inline-block">Ryan Chapel</span>
+                <span className="main-logo"></span><span className="inline-block silkscreen-regular">Ryan Chapel</span>
               </span>
             </a>
           </div>

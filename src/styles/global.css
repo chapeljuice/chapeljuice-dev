@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  font-family: "futura-pt", sans-serif;
+}
+
 /* Silkscreen Font */
 .silkscreen-regular {
   font-family: "Silkscreen", monospace;

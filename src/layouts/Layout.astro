@@ -15,7 +15,7 @@ export interface Props {
 const { 
   title, 
   description = "Ryan Chapel - Web Developer & Engineering Consultant. Helping small businesses grow with custom websites, full-stack applications, and technical consulting.",
-  image = "/images/me-white-sunnys-o.jpg",
+  image = "/images/chapeljuice-white-sunnys-o.jpg",
   canonicalURL = Astro.url.href,
   type = "website",
   publishedTime,
@@ -33,7 +33,7 @@ const structuredData = {
   "@type": "Person",
   "name": "Ryan Chapel",
   "url": "https://chapeljuice.dev",
-  "image": "https://chapeljuice.dev/images/me-white-sunnys-o.jpg",
+  "image": "https://chapeljuice.dev/images/chapeljuice-white-sunnys-o.jpg",
   "sameAs": [
     "https://github.com/chapeljuice"
   ],
@@ -110,6 +110,7 @@ const structuredData = {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/pbi4oog.css">
     
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

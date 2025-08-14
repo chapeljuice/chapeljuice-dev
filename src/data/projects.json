@@ -1,19 +1,19 @@
 [
   {
     "id": "1",
-    "title": "Brewery Site Upgrades",
+    "title": "Brewery Site Improvements",
     "description": "I provide custom website solutions for breweries that incorporate clean design and a dead simple way to update their current tap list.",
-    "technologies": ["AI", "TypeScript", "HTML", "CSS"],
+    "technologies": ["TypeScript", "HTML", "CSS"],
     "category": "Freelance / Independent",
     "year": "2025",
     "status": "Coming Soon",
     "featured": true,
     "github": "https://github.com/chapeljuice/brewery-base",
-    "image": "/images/project-screens/self-formulabrewing.png"
+    "image": "/images/project-screens/self-breweries.png"
   },
   {
     "id": "2",
-    "title": "Custom 3D Furniture Visualizer",
+    "title": "3D Furniture Visualizer",
     "description": "I'm working on a custom 3D furniture visualizer that allows users to upload their own furniture images and see how they would look in their home.",
     "technologies": ["React", "TypeScript", "Three.js", "AI", "CSS Modules"],
     "category": "Freelance / Independent",
@@ -36,17 +36,6 @@
   },
   {
     "id": "4",
-    "title": "PaperNFTs",
-    "description": "Designed, developed, and launched a full dynamically-generated NFT collection utilizing Web3 technology. The NFTs were generated using pictures I took of actual construction paper cut-outs that I cut out by hand, took pictures of, and then uploaded with transparent backgrounds. Those images were then used to construct a full NFT composed of multiple images in random patterns that portrayed unique landscapes. I implemented smart contracts, metadata generation, and blockchain integration to ensure secure and decentralized asset ownership. I also managed the entire development lifecycle, from concept and design to deployment and marketing.",
-    "technologies": ["React", "TypeScript", "Next.js", "Solidity"],
-    "category": "Freelance / Independent",
-    "year": "2025",
-    "status": "Completed",
-    "link": "https://www.papernfts.com",
-    "image": "/images/project-screens/self-papernfts.jpeg"
-  },
-  {
-    "id": "5",
     "title": "Freedom Boat Club Reservations System",
     "description": "I was the lead front-end developer for creating a new reservations system for Freedom Boat Club. The content was managed by Adobe Experience Manager, and the site was made for both members and staff who needed to manage reservations and get their customers out on the water.",
     "technologies": ["Adobe AEM", "React"],
@@ -56,12 +45,23 @@
     "image": "/images/project-screens/avionos-freedomboatclub.png"
   },
   {
+    "id": "5",
+    "title": "PaperNFTs",
+    "description": "Designed, developed, and launched a full dynamically-generated NFT collection utilizing Web3 technology. The NFTs were generated using pictures I took of actual construction paper cut-outs that I cut out by hand, took pictures of, and then uploaded with transparent backgrounds. Those images were then used to construct a full NFT composed of multiple images in random patterns that portrayed unique landscapes. I implemented smart contracts, metadata generation, and blockchain integration to ensure secure and decentralized asset ownership. I also managed the entire development lifecycle, from concept and design to deployment and marketing.",
+    "technologies": ["React", "TypeScript", "Next.js", "Solidity"],
+    "category": "Freelance / Independent",
+    "year": "2022",
+    "status": "Completed",
+    "link": "https://www.papernfts.com",
+    "image": "/images/project-screens/self-papernfts.jpeg"
+  },
+  {
     "id": "6",
     "title": "RedAwning Native App",
     "description": "I was the lead UI developer at RedAwning and created their native app from scratch using React Native. It allowed their customers to manage their reservations and had cool features like automatically checking in to their vacation rental when they arrived.",
     "technologies": ["React Native", "JavaScript", "Expo"],
     "category": "Team / Company",
-    "year": "2024",
+    "year": "2018",
     "status": "Completed",
     "link": "https://redawning.com",
     "image": "/images/project-screens/redawning-app.jpg"

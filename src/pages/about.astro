@@ -8,14 +8,14 @@ import SectionDivider from '../components/SectionDivider';
 <Layout 
   title="About Ryan Chapel - Web Developer & Engineering Consultant | Seattle"
   description="Learn about Ryan Chapel's 10+ year journey in web development and engineering management. From LPGA.com to helping small businesses grow with custom solutions."
-  image="/images/me-white-sunnys-o.jpg"
+  image="/images/chapeljuice-white-sunnys-o.jpg"
   tags={["about", "web developer", "engineering consultant", "Seattle", "LPGA", "React", "TypeScript"]}
 >
   <Navigation client:load currentPath={Astro.url.pathname} />
   
   <main>
     <!-- Hero Section -->
-    <section class="bg-[#eff6ff] py-20">
+    <section class="bg-[#eff6ff] py-12 md:py-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 silkscreen-regular">
@@ -31,7 +31,7 @@ import SectionDivider from '../components/SectionDivider';
     <SectionDivider bottomColor="#fff" topColor="#eff6ff" />
     
     <!-- Story Section -->
-    <section class="py-20 bg-white">
+    <section class="py-12 md:py-20 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
@@ -58,7 +58,7 @@ import SectionDivider from '../components/SectionDivider';
     <SectionDivider bottomColor="#f8fafc" topColor="#fff" />
     
     <!-- Skills & Experience -->
-    <section class="py-20 bg-[#f8fafc]">
+    <section class="py-12 md:py-20 bg-[#f8fafc]">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">Skills & Experience</h2>
@@ -123,7 +123,7 @@ import SectionDivider from '../components/SectionDivider';
     <SectionDivider bottomColor="#fff" topColor="#f8fafc" />
 
     <!-- Values Section -->
-    <section class="py-20 bg-white">
+    <section class="py-12 md:py-20 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">Core Values</h2>
@@ -175,7 +175,7 @@ import SectionDivider from '../components/SectionDivider';
     <SectionDivider bottomColor="#f8fafc" topColor="#fff" />
 
     <!-- Call to Action -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-12 md:py-20 bg-gray-50">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold text-gray-900 mb-4">
           Let's Build Something Together
