@@ -42,6 +42,7 @@ const ContactForm = () => {
     >
       {/* Netlify form detection */}
       <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="subject" value="Chapeljuice.dev :: Contact Form, (%{submissionId})" />
       <div className="hidden">
         <input name="bot-field" />
       </div>
