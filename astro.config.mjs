@@ -8,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   integrations: [react()],
   output: 'static',
-  site: 'https://animated-pixie-4fea0d.netlify.app',
+  site: 'https://chapeljuice.dev',
   
   build: {
     inlineStylesheets: 'auto',

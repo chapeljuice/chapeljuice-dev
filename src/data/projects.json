@@ -6,7 +6,7 @@
     "technologies": ["AI", "TypeScript", "HTML", "CSS"],
     "category": "Freelance / Independent",
     "year": "2025",
-    "status": "In Progress",
+    "status": "Coming Soon",
     "featured": true,
     "github": "https://github.com/chapeljuice/brewery-base",
     "image": "/images/project-screens/self-formulabrewing.png"
@@ -18,14 +18,14 @@
     "technologies": ["React", "TypeScript", "Three.js", "AI", "CSS Modules"],
     "category": "Freelance / Independent",
     "year": "2025",
-    "status": "In Progress",
+    "status": "Coming Soon",
     "github": "https://github.com/chapeljuice/pegwall-visualizer",
     "image": "/images/project-screens/kerf-wall-visualizer.png"
   },
   {
     "id": "3",
     "title": "LPGA.com & LPGA Mobile App",
-    "description": "I was the lead front-end developer for the LPGA.com and LPGA Mobile App. I was responsible for the front-end team, and the development of all the UI components and pages. I worked closedly with the project manager to ensure the project stayed on track and we had the appropriate resources in order to complete the project on time. I also demoed our progress regularly to the client, and was in charge of deployments including production releases.",
+    "description": "I was the lead front-end developer for the LPGA.com and LPGA Mobile App. I was responsible for the front-end team, and the development of all the UI components and pages. I worked closely with the project manager to ensure the project stayed on track and we had the appropriate resources to complete the project on time. I also demoed our progress regularly to the client, and was in charge of deployments including production releases.",
     "technologies": ["React", "TypeScript", "React Native", "Tamagui", "AWS", "Next.js"],
     "category": "Team / Company",
     "year": "2024",
@@ -37,7 +37,7 @@
   {
     "id": "4",
     "title": "PaperNFTs",
-    "description": "Designed, developed, and launched a full dynamically-generated NFT collection utilizing Web3 technology. The NFTs were generated using pictures I took of actual construction paper cut-outs that I cut out by hand, took pictures of, and then uploaded with transparent backgrounds. Those images were then used to construct a full NFT composed of multiple images in random patterns that portrayed unique landscapes. I Implemented smart contracts, metadata generation, and blockchain integration to ensure secure and decentralized asset ownership. I also managed the entire development lifecycle, from concept and design to deployment and marketing.",
+    "description": "Designed, developed, and launched a full dynamically-generated NFT collection utilizing Web3 technology. The NFTs were generated using pictures I took of actual construction paper cut-outs that I cut out by hand, took pictures of, and then uploaded with transparent backgrounds. Those images were then used to construct a full NFT composed of multiple images in random patterns that portrayed unique landscapes. I implemented smart contracts, metadata generation, and blockchain integration to ensure secure and decentralized asset ownership. I also managed the entire development lifecycle, from concept and design to deployment and marketing.",
     "technologies": ["React", "TypeScript", "Next.js", "Solidity"],
     "category": "Freelance / Independent",
     "year": "2025",

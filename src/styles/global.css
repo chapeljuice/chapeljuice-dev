@@ -7,6 +7,34 @@
   font-style: normal;
 }
 
+/* main logo animation */
+@keyframes pulse-logo {
+  0%,
+  20% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  80%,
+  100% {
+    transform: scale(1) rotateZ(360deg); 
+  } 
+}
+
+.main-logo {
+  animation: pulse-logo 2s infinite ease-in-out;
+  background-color: #008080;
+  border-radius: 0 50% 50% 50%;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+}
+
+.main-logo:hover {
+  animation-play-state: paused;
+}
+
 /* Rocket vibration animation */
 @keyframes rocket-vibrate {
   0%, 100% { 
@@ -239,4 +267,8 @@ html {
 .smooth-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.coming-soon {
+  /* filter: blur(2px); */
 }

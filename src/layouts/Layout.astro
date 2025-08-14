@@ -2,24 +2,128 @@
 export interface Props {
   title: string;
   description?: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
 }
 
-const { title, description = "Portfolio site for web development, engineering management, and consulting" } = Astro.props;
+const { 
+  title, 
+  description = "Ryan Chapel - Web Developer & Engineering Consultant. Helping small businesses grow with custom websites, full-stack applications, and technical consulting.",
+  image = "/images/me-white-sunnys-o.jpg",
+  canonicalURL = Astro.url.href,
+  type = "website",
+  publishedTime,
+  modifiedTime,
+  author = "Ryan Chapel",
+  section,
+  tags = ["web development", "engineering consulting", "React", "TypeScript", "small business", "Snoqualmie", "Seattle", "full-stack", "freelance", "consulting", "engineering management", "React Native", "Express.js", "Node.js", "web development", "web design", "web development consulting", "web development services", "web development agency", "web development company", "web development firm", "web development studio", "web development agency", "web development company", "web development firm", "web development studio", "brewery", "arcade"]
+} = Astro.props;
+
 import '../styles/global.css';
+
+// Generate structured data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ryan Chapel",
+  "url": "https://chapeljuice.dev",
+  "image": "https://chapeljuice.dev/images/me-white-sunnys-o.jpg",
+  "sameAs": [
+    "https://github.com/chapeljuice"
+  ],
+  "jobTitle": "Web Developer & Engineering Consultant",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Self-employed"
+  },
+  "description": "Web developer and engineering consultant helping small businesses grow with custom websites and technical solutions.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Snoqualmie",
+    "addressRegion": "WA",
+    "addressCountry": "US"
+  }
+};
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={author} />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Ryan Chapel - Web Developer" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+    <meta property="twitter:creator" content="@chapeljuice" />
+    
+    <!-- Additional Open Graph tags for articles -->
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {author && <meta property="article:author" content={author} />}
+    {section && <meta property="article:section" content={section} />}
+    {tags && tags.map(tag => <meta property="article:tag" content={tag} />)}
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Generator -->
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-    <title>{title}</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#008080" />
+    <meta name="msapplication-TileColor" content="#008080" />
+    <meta name="keywords" content={tags.join(", ")} />
+    
+    <!-- Security -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
   </head>
   <body class="bg-gray-50 text-gray-900 antialiased">
     <slot />
