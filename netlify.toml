@@ -5,6 +5,11 @@
 [build.environment]
   NODE_VERSION = "18"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+
 # Handle static assets properly
 [[headers]]
   for = "/images/*"
