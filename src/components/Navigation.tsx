@@ -12,6 +12,7 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
     { href: '/about', label: 'About' },
     { href: '/projects', label: 'Projects' },
     { href: '/contact', label: 'Contact' },
+    { href: 'https://github.com/chapeljuice', label: 'GitHub', external: true },
   ];
 
   return (
@@ -32,6 +33,8 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
               <a
                 key={item.href}
                 href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
                 className={`px-3 py-2 rounded-md text-lg font-medium transition-colors relative ${
                   currentPath === item.href
                     ? 'text-teal-600 nav-active'
@@ -69,12 +72,14 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
                 <a
                   key={item.href}
                   href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
                   className={`block px-3 py-2 rounded-md text-lg font-medium transition-colors relative ${
                     currentPath === item.href
                       ? 'text-teal-600 nav-active'
                       : 'text-gray-700 hover:text-teal-600'
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => !item.external && setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
