@@ -103,14 +103,18 @@ const structuredData = {
     <link rel="manifest" href="/site.webmanifest">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     
+    <!-- Safari-specific meta tags -->
+    <meta name="apple-mobile-web-app-title" content="Ryan Chapel" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
     <!-- Generator -->
     <meta name="generator" content={Astro.generator} />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/pbi4oog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Silkscreen&display=swap" rel="stylesheet">
     
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
@@ -118,6 +122,8 @@ const structuredData = {
     <!-- Additional SEO -->
     <meta name="theme-color" content="#008080" />
     <meta name="msapplication-TileColor" content="#008080" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="keywords" content={tags.join(", ")} />
     
     <!-- Security -->

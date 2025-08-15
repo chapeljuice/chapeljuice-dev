@@ -78,6 +78,8 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
               <img 
                 src={project.image} 
                 alt={`${project.title} screenshot`}
+                width="800"
+                height="600"
                 className="w-full h-full object-cover opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.1s_forwards]"
               />
             ) : (

@@ -1,49 +1,40 @@
 [build]
-  command = "npm run build"
   publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "18"
+  command = "npm run build"
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Handle static assets properly
 [[headers]]
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    ETag = "true"
 
 [[headers]]
-  for = "/_astro/*"
+  for = "/fonts/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    ETag = "true"
-
-# Cache all static assets
-[[headers]]
-  for = "*.png"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    ETag = "true"
 
 [[headers]]
-  for = "*.jpg"
+  for = "*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    ETag = "true"
 
 [[headers]]
-  for = "*.jpeg"
+  for = "*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    ETag = "true"
 
 [[headers]]
-  for = "*.webp"
+  for = "*.html"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    ETag = "true"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

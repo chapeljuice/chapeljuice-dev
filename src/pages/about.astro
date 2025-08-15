@@ -11,6 +11,7 @@ import SectionDivider from '../components/SectionDivider';
   image="/images/chapeljuice-white-sunnys-o.jpg"
   tags={["about", "web developer", "engineering consultant", "Seattle", "LPGA", "React", "TypeScript"]}
 >
+
   <Navigation client:load currentPath={Astro.url.pathname} />
   
   <main>
@@ -49,7 +50,15 @@ import SectionDivider from '../components/SectionDivider';
             </div>
           </div>
           <div class="bg-gradient-to-br from-amber-100 to-orange-200 h-96 rounded-xl flex items-center justify-center">
-            <img src="/images/me-white-sunnys-o.jpg" alt="Ryan Chapel" class="w-full h-full object-cover rounded-xl" />
+            <img 
+              src="/images/me-white-sunnys-o.jpg" 
+              alt="Ryan Chapel" 
+              width="800"
+              height="600"
+              loading="eager"
+              fetchpriority="high"
+              class="w-full h-full object-cover rounded-xl" 
+            />
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import SectionDivider from '../components/SectionDivider';
   image="/images/chapeljuice-white-sunnys-o.jpg"
   tags={["web development", "engineering consulting", "small business", "React", "TypeScript", "breweries", "arcades"]}
 >
+
   <Navigation client:load currentPath={Astro.url.pathname} />
   
   <main>
@@ -108,7 +109,14 @@ import SectionDivider from '../components/SectionDivider';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div class="bg-white rounded-xl overflow-hidden smooth-card group">
             <div class="h-64 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-blue-200 group-hover:to-indigo-300">
-              <img src="/images/project-screens/hero-lpga.png" alt="LPGA Project Preview" class="w-full h-full object-cover smooth-scale" />
+              <img 
+                src="/images/project-screens/hero-lpga.png" 
+                alt="LPGA Project Preview" 
+                width="600"
+                height="400"
+                loading="lazy"
+                class="w-full h-full object-cover smooth-scale" 
+              />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2 silkscreen-regular">Portfolio</h3>
@@ -124,7 +132,14 @@ import SectionDivider from '../components/SectionDivider';
 
           <div class="bg-white rounded-xl overflow-hidden smooth-card group">
             <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-amber-200 group-hover:to-orange-300">
-              <img src="/images/resume-screen.png" alt="Resume Preview" class="w-full h-full object-cover object-top smooth-scale" />
+              <img 
+                src="/images/resume-screen.png" 
+                alt="Resume Preview" 
+                width="600"
+                height="400"
+                loading="lazy"
+                class="w-full h-full object-cover object-top smooth-scale" 
+              />
             </div>
             <div class="p-6">
             <h3 class="text-xl font-bold text-gray-900 mb-2 silkscreen-regular">Resume</h3>

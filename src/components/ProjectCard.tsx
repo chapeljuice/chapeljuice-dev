@@ -30,10 +30,12 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
           <img 
             src={project.image} 
             alt={`${project.title} screenshot`}
+            width="600"
+            height="400"
             className={`w-full h-full object-cover smooth-scale opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.1s_forwards] ${
               project.status === 'Coming Soon' ? 'coming-soon' : ''
             }`}
-            loading="eager"
+            loading="lazy"
           />
         ) : (
           <div className="flex items-center justify-center h-full">
