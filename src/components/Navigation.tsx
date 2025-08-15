@@ -38,6 +38,15 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
                 <span 
                   className="main-logo"
                   onClick={handleLogoClick}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      handleLogoClick(e as any);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-label="Toggle color theme"
                   style={{ cursor: 'pointer' }}
                 ></span>
                 <span className="inline-block silkscreen-regular">Ryan Chapel</span>
@@ -69,8 +78,11 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-primary focus:outline-none focus:text-primary"
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -84,7 +96,7 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div id="mobile-menu" className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
               {navItems.map((item) => (
                 <a
