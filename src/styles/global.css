@@ -345,6 +345,12 @@ html {
   }
 }
 
+/* Modal backdrop with proper opacity */
+.modal-backdrop {
+  background-color: var(--primary-color);
+  opacity: 0.9;
+}
+
 /* Smooth image hover transition */
 .smooth-scale {
   transform: scale(1);

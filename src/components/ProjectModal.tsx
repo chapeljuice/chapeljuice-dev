@@ -56,7 +56,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
     <div className="fixed inset-0 z-50 overflow-y-auto">
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-primary/90 transition-opacity"
+        className="fixed inset-0 modal-backdrop transition-opacity"
         onClick={onClose}
       />
       
