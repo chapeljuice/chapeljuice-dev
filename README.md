@@ -9,7 +9,7 @@ A modern portfolio website showcasing web development expertise, built with Astr
 - **Dynamic Color Themes**: Click the logo to switch between teal and orange color schemes
 - **Portfolio Showcase**: Interactive project filtering and modal displays
 - **Modern Design**: Clean, responsive design with smooth animations and hover effects
-- **Fast Performance**: Optimized for Core Web Vitals with preloading and lazy loading
+- **Fast Performance**: Optimized for Core Web Vitals with responsive images, preloading and lazy loading
 - **Interactive Components**: React components for dynamic filtering, forms, and navigation
 - **SEO Optimized**: Built-in SEO best practices, structured data, and meta tags
 - **Mobile First**: Fully responsive design that works on all devices
@@ -46,6 +46,8 @@ src/
 │   ├── ProjectFilter.tsx # Project filtering component
 │   ├── ProjectModal.tsx # Project detail modal
 │   ├── ContactForm.tsx  # Contact form
+│   ├── ResponsiveImage.tsx # React responsive image component
+│   ├── ResponsiveImage.astro # Astro responsive image component
 │   └── SectionDivider.tsx # Chevron-looking section dividers
 ├── data/               # JSON data files
 │   └── projects.json   # Technical projects data
@@ -97,6 +99,7 @@ npm run dev
 - **Accessibility**: Keyboard navigation and ARIA labels included
 
 ### Performance Optimizations
+- **Responsive Images**: Picture element with WebP fallbacks and multiple sizes
 - **Image Optimization**: Lazy loading, proper dimensions, and loading strategies
 - **Font Loading**: Preconnect and optimized font loading
 - **Bundle Splitting**: Separate vendor chunks for React and Astro

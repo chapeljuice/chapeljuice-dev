@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ResponsiveImage from './ResponsiveImage';
 
 interface Project {
   id: string;
@@ -75,12 +76,14 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
           {/* Project Image */}
           <div className="h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-t-xl overflow-hidden">
             {project.image ? (
-              <img 
+              <ResponsiveImage 
                 src={project.image} 
                 alt={`${project.title} screenshot`}
-                width="800"
-                height="600"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.1s_forwards]"
+                sizes="(max-width: 768px) 100vw, 800px"
+                priority={true}
               />
             ) : (
               <div className="flex items-center justify-center h-full">

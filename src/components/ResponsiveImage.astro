@@ -1,0 +1,46 @@
+---
+export interface Props {
+  src: string;
+  alt: string;
+  className?: string;
+  sizes?: string;
+  priority?: boolean;
+  width?: number;
+  height?: number;
+  aspectRatio?: string;
+}
+
+const { 
+  src, 
+  alt, 
+  className = '', 
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  priority = false,
+  width,
+  height,
+  aspectRatio
+} = Astro.props;
+
+// Check if this is already a WebP image
+const isWebP = src.endsWith('.webp');
+
+// Generate responsive srcSet
+const generateSrcSet = (imageSrc: string) => {
+  return `${imageSrc} 1x, ${imageSrc} 2x`;
+};
+---
+
+<picture class={className}>
+  <img
+    src={src}
+    srcset={generateSrcSet(src)}
+    sizes={sizes}
+    alt={alt}
+    class={className}
+    loading={priority ? 'eager' : 'lazy'}
+    fetchpriority={priority ? 'high' : 'auto'}
+    width={width}
+    height={height}
+    style={aspectRatio ? `aspect-ratio: ${aspectRatio}` : undefined}
+  />
+</picture>

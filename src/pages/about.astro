@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SectionDivider from '../components/SectionDivider';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
 ---
 
 <Layout 
@@ -50,14 +51,14 @@ import SectionDivider from '../components/SectionDivider';
             </div>
           </div>
           <div class="bg-gradient-to-br from-amber-100 to-orange-200 h-96 rounded-xl flex items-center justify-center">
-            <img 
+            <ResponsiveImage 
               src="/images/me-white-sunnys-o.jpg" 
               alt="Ryan Chapel" 
-              width="800"
-              height="600"
-              loading="eager"
-              fetchpriority="high"
-              class="w-full h-full object-cover rounded-xl" 
+              width={800}
+              height={600}
+              priority={true}
+              className="w-full h-full object-cover rounded-xl"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>

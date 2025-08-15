@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SectionDivider from '../components/SectionDivider';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
 ---
 
 <Layout 
@@ -109,13 +110,13 @@ import SectionDivider from '../components/SectionDivider';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div class="bg-white rounded-xl overflow-hidden smooth-card group">
             <div class="h-64 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-blue-200 group-hover:to-indigo-300">
-              <img 
+              <ResponsiveImage 
                 src="/images/project-screens/hero-lpga.webp" 
                 alt="LPGA Project Preview" 
-                width="600"
-                height="400"
-                loading="lazy"
-                class="w-full h-full object-cover smooth-scale" 
+                width={600}
+                height={400}
+                className="w-full h-full object-cover smooth-scale"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div class="p-6">
@@ -132,13 +133,13 @@ import SectionDivider from '../components/SectionDivider';
 
           <div class="bg-white rounded-xl overflow-hidden smooth-card group">
             <div class="h-64 bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-amber-200 group-hover:to-orange-300">
-              <img 
+              <ResponsiveImage 
                 src="/images/resume-screen.png" 
                 alt="Resume Preview" 
-                width="600"
-                height="400"
-                loading="lazy"
-                class="w-full h-full object-cover object-top smooth-scale" 
+                width={600}
+                height={400}
+                className="w-full h-full object-cover object-top smooth-scale"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div class="p-6">

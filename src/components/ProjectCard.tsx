@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ResponsiveImage from './ResponsiveImage';
 
 interface Project {
   id: string;
@@ -27,15 +28,15 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
     >
       <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-gray-200 group-hover:to-gray-300 relative">
         {project.image ? (
-          <img 
+          <ResponsiveImage 
             src={project.image} 
             alt={`${project.title} screenshot`}
-            width="600"
-            height="400"
+            width={600}
+            height={400}
             className={`w-full h-full object-cover smooth-scale opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.1s_forwards] ${
               project.status === 'Coming Soon' ? 'coming-soon' : ''
             }`}
-            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
           <div className="flex items-center justify-center h-full">
