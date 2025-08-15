@@ -7,6 +7,9 @@ interface NavigationProps {
 const Navigation = ({ currentPath = '/' }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOrangeTheme, setIsOrangeTheme] = useState(false);
+  
+  // Ensure currentPath is always a string and handle edge cases
+  const normalizedCurrentPath = currentPath || '/';
 
   const navItems = [
     { href: '/', label: 'Home' },
@@ -15,6 +18,8 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
     { href: '/contact', label: 'Contact' },
     { href: 'https://github.com/chapeljuice', label: 'GitHub', external: true },
   ];
+  
+
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault(); // Prevent the anchor tag from navigating
@@ -63,7 +68,7 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noopener noreferrer" : undefined}
                 className={`px-3 py-2 rounded-md text-lg font-medium transition-colors relative ${
-                  currentPath === item.href
+                  normalizedCurrentPath === item.href
                     ? 'nav-active'
                     : 'text-gray-700 hover:text-primary'
                 }`}
@@ -105,7 +110,7 @@ const Navigation = ({ currentPath = '/' }: NavigationProps) => {
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noopener noreferrer" : undefined}
                   className={`block px-3 py-2 rounded-md text-lg font-medium transition-colors relative ${
-                    currentPath === item.href
+                    normalizedCurrentPath === item.href
                       ? 'nav-active'
                       : 'text-gray-700 hover:text-primary'
                   }`}
