@@ -15,6 +15,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import sharp from 'sharp';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -109,34 +110,51 @@ function analyzeImages() {
   return allImages;
 }
 
-function generateOptimizationCommands() {
-  log('Generating optimization commands...');
-  
-  const commands = [];
-  
-  // Example commands using Sharp (you'll need to install: npm install sharp)
-  commands.push(`
-// Example Sharp.js commands for image optimization:
-import sharp from 'sharp';
-
-async function optimizeImage(inputPath, outputPath, width) {
-  await sharp(inputPath)
-    .resize(width)
-    .webp({ quality: 80 })
-    .toFile(outputPath);
+async function optimizeImage(inputPath, outputPath, width = null) {
+  try {
+    let sharpInstance = sharp(inputPath);
+    
+    if (width) {
+      sharpInstance = sharpInstance.resize(width);
+    }
+    
+    await sharpInstance
+      .webp({ 
+        quality: 80,
+        effort: 6
+      })
+      .toFile(outputPath);
+    
+    return true;
+  } catch (error) {
+    log(`Error optimizing ${inputPath}: ${error.message}`);
+    return false;
+  }
 }
 
-// Example usage:
-// optimizeImage('public/images/hero.jpg', 'public/images/hero-320w.webp', 320);
-// optimizeImage('public/images/hero.jpg', 'public/images/hero-480w.webp', 480);
-// optimizeImage('public/images/hero.jpg', 'public/images/hero-640w.webp', 640);
-  `);
+async function convertToWebP(inputPath) {
+  const ext = path.extname(inputPath);
+  const basePath = inputPath.replace(ext, '');
+  const outputPath = `${basePath}.webp`;
   
-  return commands;
+  log(`Converting ${path.relative('public', inputPath)} to WebP...`);
+  
+  const success = await optimizeImage(inputPath, outputPath);
+  
+  if (success) {
+    // Get file sizes for comparison
+    const inputStats = fs.statSync(inputPath);
+    const outputStats = fs.statSync(outputPath);
+    
+    log(`✅ Converted to ${path.relative('public', outputPath)}`);
+    log(`   PNG: ${(inputStats.size / 1024).toFixed(1)} KB → WebP: ${(outputStats.size / 1024).toFixed(1)} KB`);
+  }
+  
+  return success;
 }
 
-function main() {
-  log('Starting image optimization analysis...');
+async function main() {
+  log('Starting image optimization...');
   
   const images = analyzeImages();
   
@@ -145,15 +163,14 @@ function main() {
     return;
   }
   
-  log('\nNext steps:');
-  log('1. Install Sharp: npm install sharp');
-  log('2. Create actual optimization script using the examples below');
-  log('3. Run optimization script to generate responsive images');
-  log('4. Update ResponsiveImage components to use the new image paths');
+  // Convert specific PNG to WebP if it exists
+  const resumeImage = 'public/images/resume-screen-08152025.png';
+  if (fs.existsSync(resumeImage)) {
+    log('\nConverting resume image to WebP...');
+    await convertToWebP(resumeImage);
+  }
   
-  console.log('\n' + generateOptimizationCommands().join('\n'));
-  
-  log('Analysis complete!');
+  log('\nOptimization complete!');
 }
 
 main();

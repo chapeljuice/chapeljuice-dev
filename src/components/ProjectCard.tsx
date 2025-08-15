@@ -48,7 +48,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
         
         <div className="absolute top-3 right-3">
           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-            project.status === 'Completed' 
+            project.status === 'Completed' || project.status === 'Demo Completed'
               ? 'bg-green-100 text-green-800' 
               : 'bg-yellow-100 text-yellow-800'
           }`}>
