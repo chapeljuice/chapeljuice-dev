@@ -2,6 +2,8 @@
 
 A modern portfolio website showcasing web development expertise, built with Astro, React, and Tailwind CSS.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4d3f3de3-58c4-444e-b0a0-bc4dd361f57b/deploy-status)](https://app.netlify.com/projects/animated-pixie-4fea0d/deploys)
+
 ## 🚀 Features
 
 - **Portfolio**: Showcases both individual and company-led technical projects
