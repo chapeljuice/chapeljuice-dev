@@ -9,7 +9,7 @@
     "status": "Coming Soon",
     "featured": true,
     "github": "https://github.com/chapeljuice/brewery-base",
-    "image": "/images/project-screens/self-breweries.png"
+    "image": "/images/project-screens/self-breweries.webp"
   },
   {
     "id": "2",
@@ -20,7 +20,7 @@
     "year": "2025",
     "status": "Coming Soon",
     "github": "https://github.com/chapeljuice/pegwall-visualizer",
-    "image": "/images/project-screens/kerf-wall-visualizer.png"
+    "image": "/images/project-screens/kerf-wall-visualizer.webp"
   },
   {
     "id": "3",
@@ -32,7 +32,7 @@
     "status": "Completed",
     "link": "https://lpga.com",
     "featured": true,
-    "image": "/images/project-screens/hero-lpga.png"
+    "image": "/images/project-screens/hero-lpga.webp"
   },
   {
     "id": "4",
@@ -42,7 +42,7 @@
     "category": "Team / Company",
     "year": "2023",
     "status": "Completed",
-    "image": "/images/project-screens/avionos-freedomboatclub.png"
+    "image": "/images/project-screens/avionos-freedomboatclub.webp"
   },
   {
     "id": "5",
