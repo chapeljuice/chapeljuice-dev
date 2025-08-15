@@ -6,12 +6,24 @@ A modern portfolio website showcasing web development expertise, built with Astr
 
 ## 🚀 Features
 
-- **Portfolio**: Showcases both individual and company-led technical projects
-- **Modern Design**: Clean, responsive design with smooth animations
-- **Fast Performance**: Astro's static site generation for optimal loading speeds
-- **Interactive Components**: React components for dynamic filtering and forms
-- **SEO Optimized**: Built-in SEO best practices and meta tags
+- **Dynamic Color Themes**: Click the logo to switch between teal and orange color schemes
+- **Portfolio Showcase**: Interactive project filtering and modal displays
+- **Modern Design**: Clean, responsive design with smooth animations and hover effects
+- **Fast Performance**: Optimized for Core Web Vitals with preloading and lazy loading
+- **Interactive Components**: React components for dynamic filtering, forms, and navigation
+- **SEO Optimized**: Built-in SEO best practices, structured data, and meta tags
 - **Mobile First**: Fully responsive design that works on all devices
+- **Accessibility**: ARIA labels, keyboard navigation, and screen reader support
+- **Security**: Content Security Policy (CSP) and security headers
+- **PWA Ready**: Web app manifest and theme color support
+
+## 🎨 Color Theme System
+
+The site features a dynamic color switching system:
+- **Default Theme**: Teal color scheme (`#008080`)
+- **Alternate Theme**: Orange color scheme (`#ee5418`)
+- **How to Use**: Click the main logo in the navigation to toggle themes
+- **Implementation**: CSS custom properties with React state management
 
 ## 🛠️ Tech Stack
 
@@ -19,28 +31,34 @@ A modern portfolio website showcasing web development expertise, built with Astr
 - **UI Library**: [React](https://reactjs.org/) - Interactive components
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
 - **TypeScript**: Type-safe development
+- **Analytics**: Google Tag Manager (GTM)
 - **Icons**: Heroicons via SVG
+- **Fonts**: Google Fonts (Silkscreen & Jost)
 
 ## 📁 Project Structure
 
 ```
 src/
 ├── components/          # React components
-│   ├── Navigation.tsx   # Main navigation
+│   ├── Navigation.tsx   # Main navigation with theme switching
 │   ├── Footer.tsx       # Site footer
 │   ├── ProjectCard.tsx  # Project display component
-│   └── ContactForm.tsx  # Contact form
+│   ├── ProjectFilter.tsx # Project filtering component
+│   ├── ProjectModal.tsx # Project detail modal
+│   ├── ContactForm.tsx  # Contact form
+│   └── SectionDivider.tsx # Chevron-looking section dividers
 ├── data/               # JSON data files
-│   ├── projects.json   # Technical projects data
+│   └── projects.json   # Technical projects data
 ├── layouts/            # Astro layouts
 │   └── Layout.astro    # Main page layout
 ├── pages/              # Site pages
 │   ├── index.astro     # Homepage
 │   ├── about.astro     # About page
 │   ├── projects.astro  # Projects showcase
-│   └── contact.astro   # Contact page
+│   ├── contact.astro   # Contact page
+│   └── sitemap.xml.ts  # Dynamic sitemap generation
 └── styles/
-    └── global.css      # Global styles and utilities
+    └── global.css      # Global styles, theme variables, and utilities
 ```
 
 ## 🚦 Getting Started
@@ -55,7 +73,7 @@ src/
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd ryanchapel
+cd chapeljuice-dev
 ```
 
 2. Install dependencies:
@@ -69,6 +87,25 @@ npm run dev
 ```
 
 4. Open [http://localhost:4321](http://localhost:4321) in your browser
+
+## 🎯 Key Features Implementation
+
+### Color Theme Switching
+- **Location**: `src/components/Navigation.tsx`
+- **CSS Variables**: `src/styles/global.css`
+- **How it works**: React state manages theme, CSS custom properties handle color changes
+- **Accessibility**: Keyboard navigation and ARIA labels included
+
+### Performance Optimizations
+- **Image Optimization**: Lazy loading, proper dimensions, and loading strategies
+- **Font Loading**: Preconnect and optimized font loading
+- **Bundle Splitting**: Separate vendor chunks for React and Astro
+- **Caching**: Optimized cache headers for static assets
+
+### Security Features
+- **Content Security Policy**: Configured for GTM and inline scripts
+- **Security Headers**: X-Frame-Options, X-Content-Type-Options, Referrer-Policy
+- **HTTPS Enforcement**: Secure connections only
 
 ## 📝 Customization
 
@@ -91,18 +128,38 @@ Edit `src/data/projects.json` to add your technical projects:
 }
 ```
 
+### Customizing Color Themes
+
+Edit `src/styles/global.css` to modify the color schemes:
+
+```css
+:root {
+  --primary-color: #008080;    /* Default teal */
+  --primary-hover: #006666;
+  /* ... other teal variants */
+}
+
+body.orange-theme {
+  --primary-color: #ee5418;    /* Orange theme */
+  --primary-hover: #d14a15;
+  /* ... other orange variants */
+}
+```
+
 ### Updating Content
 
 - **Navigation**: Edit `src/components/Navigation.tsx`
 - **Footer**: Edit `src/components/Footer.tsx`
 - **About Page**: Edit `src/pages/about.astro`
 - **Contact Info**: Edit `src/pages/contact.astro`
+- **Projects**: Edit `src/data/projects.json`
 
 ### Styling
 
 - Global styles: `src/styles/global.css`
 - Tailwind config: `tailwind.config.js`
 - Component-specific styles: Use Tailwind classes in components
+- Theme-aware classes: Use `.text-primary`, `.bg-primary`, etc.
 
 ## 🌐 Deployment
 
@@ -116,7 +173,7 @@ This generates a `dist/` folder with static files ready for deployment.
 
 ### Hosting Options
 
-**Netlify** (Recommended):
+**Netlify** (Recommended and what I'm currently using):
 1. Connect your GitHub repository
 2. Set build command: `npm run build`
 3. Set publish directory: `dist`
@@ -155,11 +212,16 @@ The contact form currently shows a success message without actually sending emai
 
 ## 🎨 Color Scheme
 
-The site uses a warm, professional color palette:
+The site uses dynamic color themes:
 
-- **Primary**: Amber (`#F59E0B`)
+### Default Theme (Teal)
+- **Primary**: Teal (`#008080`)
 - **Secondary**: Gray (`#6B7280`)
-- **Accent**: Blue (`#3B82F6`)
+- **Background**: Light gray (`#F9FAFB`)
+
+### Alternate Theme (Orange)
+- **Primary**: Orange (`#ee5418`)
+- **Secondary**: Gray (`#6B7280`)
 - **Background**: Light gray (`#F9FAFB`)
 
 ## 📱 Responsive Breakpoints
@@ -183,8 +245,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Feel free to submit issues and pull requests to improve the portfolio template!
+Feel free to submit issues and pull requests to improve my portfolio template!
 
 ---
 
-Built with ❤️ using Astro, React, and Tailwind CSS
+Built with ❤️ by Chapeljuice. This project is using Astro, React, and Tailwind CSS.
