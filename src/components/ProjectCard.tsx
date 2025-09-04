@@ -26,7 +26,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
       className="bg-white rounded-xl smooth-card overflow-hidden cursor-pointer group flex flex-col h-full"
       onClick={onClick}
     >
-      <div className="h-48 bg-gradient-to-br from-teal-100 to-teal-200 overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-gray-200 group-hover:to-gray-300 relative">
+      <div className="h-48 bg-gradient-to-br from-teal-100 to-teal-200 overflow-hidden transition-all duration-[180ms] ease-out group-hover:from-teal-200 group-hover:to-teal-300 relative">
         {project.image ? (
           <ResponsiveImage 
             src={project.image} 
@@ -40,7 +40,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
           />
         ) : (
           <div className="flex items-center justify-center h-full">
-            <span className="text-gray-500 text-3xl transition-transform duration-[180ms] ease-out group-hover:scale-110">
+            <span className="text-gray-500 silkscreen-regular text-3xl transition-transform duration-[180ms] ease-out group-hover:scale-110">
             🔜 Coming Soon!
             </span>
           </div>

@@ -74,7 +74,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
           </button>
 
           {/* Project Image */}
-          <div className="h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-t-xl overflow-hidden">
+          <div className="h-64 bg-gradient-to-br from-teal-100 to-teal-200 rounded-t-xl overflow-hidden">
             {project.image ? (
               <ResponsiveImage 
                 src={project.image} 
@@ -87,7 +87,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
               />
             ) : (
               <div className="flex items-center justify-center h-full">
-                <span className="text-gray-500 text-lg">Project Image</span>
+                <span className="text-gray-500 text-3xl silkscreen-regular">🔜 Coming Soon!</span>
               </div>
             )}
           </div>

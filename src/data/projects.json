@@ -3,11 +3,11 @@
     "id": "1",
     "title": "3D Furniture Visualizer",
     "description": "I'm excited to be working with a local furniture store on a custom 3D furniture visualizer that allows users to upload their own furniture images and see how they would look in their home.",
-    "technologies": ["React", "TypeScript", "Three.js", "AI", "CSS Modules"],
+    "technologies": ["Vite", "React", "TypeScript", "Three.js", "AI", "CSS Modules", "Supabase", "Netlify"],
     "category": "Freelance / Independent",
     "year": "2025",
     "status": "Work Signed!",
-    "github": "https://github.com/chapeljuice/pegwall-visualizer",
+    "github": "",
     "image": ""
   },
   {
@@ -17,7 +17,7 @@
     "technologies": ["TypeScript", "HTML", "CSS"],
     "category": "Freelance / Independent",
     "year": "2025",
-    "status": "Coming Soon",
+    "status": "Prototype Completed",
     "featured": true,
     "github": "https://github.com/chapeljuice/brewery-base",
     "image": "/images/project-screens/self-breweries.webp"
