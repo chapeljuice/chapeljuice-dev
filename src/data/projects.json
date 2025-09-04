@@ -1,6 +1,17 @@
 [
   {
     "id": "1",
+    "title": "3D Furniture Visualizer",
+    "description": "I'm excited to be working with a local furniture store on a custom 3D furniture visualizer that allows users to upload their own furniture images and see how they would look in their home.",
+    "technologies": ["React", "TypeScript", "Three.js", "AI", "CSS Modules"],
+    "category": "Freelance / Independent",
+    "year": "2025",
+    "status": "Work Signed!",
+    "github": "https://github.com/chapeljuice/pegwall-visualizer",
+    "image": ""
+  },
+  {
+    "id": "2",
     "title": "Brewery Site Improvements",
     "description": "I provide custom website solutions for breweries that incorporate clean design and a dead simple way to update their current tap list.",
     "technologies": ["TypeScript", "HTML", "CSS"],
@@ -12,7 +23,7 @@
     "image": "/images/project-screens/self-breweries.webp"
   },
   {
-    "id": "2",
+    "id": "3",
     "title": "LPGA.com & LPGA Mobile App",
     "description": "I was the lead front-end developer for the LPGA.com and LPGA Mobile App. I was responsible for the front-end team, and the development of all the UI components and pages. I worked closely with the project manager to ensure the project stayed on track and we had the appropriate resources to complete the project on time. I also demoed our progress regularly to the client, and was in charge of deployments including production releases.",
     "technologies": ["React", "TypeScript", "React Native", "Tamagui", "AWS", "Next.js"],
@@ -22,17 +33,6 @@
     "link": "https://lpga.com",
     "featured": true,
     "image": "/images/project-screens/hero-lpga.webp"
-  },
-  {
-    "id": "3",
-    "title": "3D Furniture Visualizer",
-    "description": "I'm working on a custom 3D furniture visualizer that allows users to upload their own furniture images and see how they would look in their home.",
-    "technologies": ["React", "TypeScript", "Three.js", "AI", "CSS Modules"],
-    "category": "Freelance / Independent",
-    "year": "2025",
-    "status": "Demo Completed",
-    "github": "https://github.com/chapeljuice/pegwall-visualizer",
-    "image": "/images/project-screens/kerf-wall-visualizer.webp"
   },
   {
     "id": "4",
