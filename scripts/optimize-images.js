@@ -170,6 +170,13 @@ async function main() {
     await convertToWebP(resumeImage);
   }
   
+  // Convert Apollo UOP image to WebP if it exists
+  const apolloImage = 'public/images/project-screens/apollo-uop.png';
+  if (fs.existsSync(apolloImage)) {
+    log('\nConverting Apollo UOP image to WebP...');
+    await convertToWebP(apolloImage);
+  }
+  
   log('\nOptimization complete!');
 }
 
