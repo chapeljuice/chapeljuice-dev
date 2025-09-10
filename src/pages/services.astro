@@ -1,0 +1,257 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer';
+import SectionDivider from '../components/SectionDivider';
+---
+
+<Layout 
+  title="Services - Web Development for Small Businesses | Chapeljuice"
+  description="Custom websites, online stores, and business tools for small businesses. No tech jargon, just results. Get a free consultation today."
+  image="/images/chapeljuice-white-sunnys-o.jpg"
+  tags={["web development services", "small business", "custom websites", "e-commerce", "business tools", "consultation", "local business"]}
+>
+
+  <Navigation currentPath={Astro.url.pathname} />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-[#ffe4d5] py-12 md:py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 silkscreen-regular">
+            Services 🛠️
+          </h1>
+          <p class="text-xl text-gray-700 mb-8">
+            I build modern, impactful websites and digital solutions designed to help small and local businesses grow online. Whether you need a brand-new website or custom tools to make your business run smoother, I've got you covered.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SectionDivider bottomColor="#f9fafb" topColor="#ffe4d5" />
+
+    <!-- What I Offer Section -->
+    <section class="bg-[#f9fafb] py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 silkscreen-regular">
+            What I Can Do For You
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Every website I create is designed to help your business succeed, not just look good.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Custom Websites -->
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3 silkscreen-regular">Custom Websites</h3>
+            <p class="text-gray-600 mb-4">
+              A website that's built specifically for your business, not a generic template that looks like everyone else's.
+            </p>
+            <ul class="text-sm text-gray-600 space-y-1 ml-4">
+              <li class="list-disc">Mobile-friendly (works on phones)</li>
+              <li class="list-disc">Fast loading (customers won't wait)</li>
+              <li class="list-disc">Easy for you to update</li>
+              <li class="list-disc">Shows up in Google searches</li>
+            </ul>
+          </div>
+
+          <!-- E-commerce Solutions -->
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3 silkscreen-regular">Online Stores</h3>
+            <p class="text-gray-600 mb-4">
+              Sell your products online with a store that's easy for customers to use and easy for you to manage.
+            </p>
+            <ul class="text-sm text-gray-600 space-y-1 ml-4">
+              <li class="list-disc">Accept credit cards safely</li>
+              <li class="list-disc">Track inventory automatically</li>
+              <li class="list-disc">Send order confirmations</li>
+              <li class="list-disc">Works with your existing systems</li>
+            </ul>
+          </div>
+
+          <!-- Business Applications -->
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3 silkscreen-regular">Search Engine Optimization (SEO)</h3>
+            <p class="text-gray-600 mb-4">
+                I focus on helping small and local businesses show up where their customers are searching. My SEO services include:
+                <ul class="text-sm text-gray-600 space-y-1 ml-4">
+                    <li class="list-disc">Keyword research to target what your audience is actually looking for</li>
+                    <li class="list-disc">Text & copy improvements to help your site rank higher</li>
+                    <li class="list-disc">Ensure you appear in Google Maps and 'near me' searches</li>
+                    <li class="list-disc">Faster loading times to improve your Google ranking</li>
+                </ul>
+            </p>
+          </div>
+
+          <!-- Consultation -->
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3 silkscreen-regular">Free Consultation!</h3>
+            <p class="text-gray-600 mb-4">
+              Contact me and we can talk about your business goals—and how a better website can help you reach them!
+            </p>
+            <ul class="text-sm text-gray-600 space-y-1 ml-4">
+              <li class="list-disc">No pressure, just advice :)</li>
+              <li class="list-disc">I'll provide suggestions for improvement</li>
+              <li class="list-disc">Realistic timeline for completion</li>
+              <li class="list-disc">Transparent pricing—just ask!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SectionDivider bottomColor="#d4ffff" topColor="#f9fafb" />
+
+    <!-- Why Choose Me Section -->
+    <section class="bg-[#d4ffff] py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 silkscreen-regular">
+            Why Small Businesses Choose Me
+          </h2>
+          <p class="text-xl text-gray-600">
+            I understand the challenges small businesses face because I've worked with them for years.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 silkscreen-regular">No Tech Jargon</h3>
+                <p class="text-gray-600">I explain everything in plain English. You'll understand what I'm building and why it helps your business.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 silkscreen-regular">Fair Pricing</h3>
+                <p class="text-gray-600">No hidden fees or surprise costs. You'll know exactly what you're paying and what you're getting before work begins.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 silkscreen-regular">Quick Turnaround</h3>
+                <p class="text-gray-600">I work efficiently to get your website up and running quickly, so you can start seeing results sooner.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 silkscreen-regular">Local Understanding</h3>
+                <p class="text-gray-600">I know what works for local businesses in your area and what doesn't. No one-size-fits-all solutions.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 silkscreen-regular">Ongoing Support</h3>
+                <p class="text-gray-600">I don't disappear after your website is done. I'm here to help when you need updates or have questions.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 silkscreen-regular">Results-Focused</h3>
+                <p class="text-gray-600">Every website I build is designed to help you attract and retain more customers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <SectionDivider bottomColor="#fff" topColor="#d4ffff" />
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 silkscreen-regular">
+          Ready to Grow Your Business Online?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Let's talk about how a better website can help you reach more customers and grow your business.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+            href="/contact" 
+              class="bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-primary-hover transition-colors silkscreen-regular"
+            >
+            Get In Touch
+            </a>
+            <a 
+            href="/projects" 
+              class="border-2 border-primary text-primary px-8 py-3 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-colors silkscreen-regular"
+            >
+            View Projects
+            </a>
+          </div>
+        <p class="text-sm text-gray-500 mt-4">
+          No pressure, no hard sales pitch. Just honest advice about what your business needs.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <SectionDivider bottomColor="#1e2939" topColor="#fff" />
+
+  <Footer />
+</Layout>

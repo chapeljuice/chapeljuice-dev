@@ -7,8 +7,9 @@ const { currentPath = '/' } = Astro.props;
 
 const navItems = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
   { href: '/projects', label: 'Projects' },
+  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
   { href: 'https://github.com/chapeljuice', label: 'GitHub', external: true },
 ];
@@ -38,13 +39,13 @@ const normalizedCurrentPath = currentPath || '/';
       </div>
       
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-8">
+      <div class="hidden md:flex items-center space-x-6">
         {navItems.map((item) => (
           <a
             href={item.href}
             target={item.external ? "_blank" : undefined}
             rel={item.external ? "noopener noreferrer" : undefined}
-            class={`px-3 py-2 rounded-md text-lg font-medium transition-colors relative ${
+            class={`py-2 rounded-md text-lg font-medium transition-colors relative ${
               (normalizedCurrentPath === item.href || 
                normalizedCurrentPath === item.href + '/' ||
                normalizedCurrentPath.replace(/\/$/, '') === item.href.replace(/\/$/, ''))
@@ -53,6 +54,11 @@ const normalizedCurrentPath = currentPath || '/';
             }`}
           >
             {item.label}
+            {item.external && (
+              <svg class="inline-block w-2.5 h-2.5 align-super" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            )}
           </a>
         ))}
       </div>
@@ -96,6 +102,11 @@ const normalizedCurrentPath = currentPath || '/';
             data-mobile-nav-item
           >
             {item.label}
+            {item.external && (
+              <svg class="inline-block w-2.5 h-2.5 ml-0.5 align-super" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            )}
           </a>
         ))}
       </div>
@@ -153,14 +164,23 @@ const normalizedCurrentPath = currentPath || '/';
       });
     }
     
-    // Theme toggle
+    // Theme toggle with localStorage support
     if (logoToggle) {
+      // Apply saved theme on page load
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'orange') {
+        document.body.classList.add('orange-theme');
+      }
+
+      // Toggle theme and save to localStorage
       logoToggle.addEventListener('click', function() {
         const isOrangeTheme = document.body.classList.contains('orange-theme');
         if (isOrangeTheme) {
           document.body.classList.remove('orange-theme');
+          localStorage.setItem('theme', 'default');
         } else {
           document.body.classList.add('orange-theme');
+          localStorage.setItem('theme', 'orange');
         }
       });
       
