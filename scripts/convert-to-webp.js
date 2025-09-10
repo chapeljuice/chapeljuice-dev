@@ -8,8 +8,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function convertToWebP() {
-  const inputPath = 'public/images/resume-screen-08152025.png';
-  const outputPath = 'public/images/resume-screen.webp';
+  const inputPath = 'public/images/ryanchapel-web-resume-09102025.png';
+  const outputPath = 'public/images/ryanchapel-web-resume-09102025.webp';
   
   try {
     console.log(`Converting ${inputPath} to WebP...`);
